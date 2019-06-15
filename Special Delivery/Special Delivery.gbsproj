@@ -5,7 +5,7 @@
         "startX": 9,
         "startY": 9,
         "startDirection": "left",
-        "zoom": 200,
+        "zoom": 50,
         "startSceneId": "89702107-1594-424f-8c5b-a8afc7d3eb4c",
         "playerSpriteSheetId": "4909e8b7-9ecd-4d12-a61e-100329e5fe40",
         "startMoveSpeed": "3",
@@ -28,12 +28,16 @@
             "name": "Special Room Hint"
         },
         {
-            "id": "12",
-            "name": "Pizza ready to deliver"
+            "id": "14",
+            "name": "House No"
         },
         {
             "id": "13",
-            "name": "Pizza delivered"
+            "name": "Food delivered"
+        },
+        {
+            "id": "12",
+            "name": "Food ready to deliver"
         }
     ],
     "backgrounds": [
@@ -508,6 +512,26 @@
                     "command": "EVENT_SET_FALSE",
                     "args": {
                         "variable": "13"
+                    }
+                },
+                {
+                    "id": "8ecd929c-38c2-4ab7-b121-66eab4c5f0fb",
+                    "command": "EVENT_VARIABLE_MATH",
+                    "args": {
+                        "vectorX": "14",
+                        "operation": "set",
+                        "other": "rnd",
+                        "vectorY": "14",
+                        "value": "1",
+                        "minValue": 1,
+                        "maxValue": 4
+                    }
+                },
+                {
+                    "id": "4bec2209-5413-4e9c-ab6e-989d19ae887b",
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": "Deliver food to\nHouse #$14$"
                     }
                 },
                 {
@@ -1235,6 +1259,16 @@
             "width": 32,
             "height": 32,
             "actors": [
+                {
+                    "id": "dcf4996d-b18a-4bed-aa2a-f06ce149235e",
+                    "spriteSheetId": "fd070b07-b408-4fb3-8f37-d6fb7fcdbc2b",
+                    "x": 26,
+                    "y": 8,
+                    "movementType": "static",
+                    "direction": "down",
+                    "moveSpeed": "1",
+                    "animSpeed": "3"
+                },
                 {
                     "id": "1a2cd8f9-0d8a-4010-8a9c-5448c6b44df6",
                     "spriteSheetId": "ecd9fb53-cde0-461c-8222-94af8b6b0c1d",
