@@ -5,7 +5,7 @@
         "startX": 9,
         "startY": 9,
         "startDirection": "left",
-        "zoom": 100,
+        "zoom": 50,
         "startSceneId": "89702107-1594-424f-8c5b-a8afc7d3eb4c",
         "playerSpriteSheetId": "4909e8b7-9ecd-4d12-a61e-100329e5fe40",
         "startMoveSpeed": "3",
@@ -831,70 +831,6 @@
             "height": 32,
             "actors": [],
             "triggers": [
-                {
-                    "id": "4ab2880f-f8bf-4418-b797-e2570e475b82",
-                    "x": 13,
-                    "y": 17,
-                    "width": 3,
-                    "height": 1,
-                    "trigger": "walk",
-                    "script": [
-                        {
-                            "id": "c277cf79-fe14-4eab-a50b-3541d9270840",
-                            "command": "EVENT_SWITCH_SCENE",
-                            "args": {
-                                "sceneId": "b338332f-11df-47dd-a604-d2f70c3611cd",
-                                "x": 29,
-                                "y": 23,
-                                "direction": "left",
-                                "fadeSpeed": "1"
-                            }
-                        },
-                        {
-                            "id": "8aa25a03-7a12-4f87-9de8-14c267c6d221",
-                            "command": "EVENT_CAMERA_LOCK",
-                            "args": {
-                                "speed": "0"
-                            }
-                        },
-                        {
-                            "id": "b1e062b4-465e-40c0-8813-3534695a80df",
-                            "command": "EVENT_END"
-                        }
-                    ]
-                },
-                {
-                    "id": "873513f5-3d7f-4af4-ad2d-8bde68d37817",
-                    "x": 31,
-                    "y": 14,
-                    "width": 1,
-                    "height": 4,
-                    "trigger": "walk",
-                    "script": [
-                        {
-                            "id": "8a08dd8e-0934-4ad4-a050-04169d871b11",
-                            "command": "EVENT_SWITCH_SCENE",
-                            "args": {
-                                "sceneId": "92fd3001-bf17-47ec-b716-3c43092b9463",
-                                "x": 1,
-                                "y": 15,
-                                "direction": "right",
-                                "fadeSpeed": "1"
-                            }
-                        },
-                        {
-                            "id": "b9996349-6a76-4d47-8304-ff91639e63e2",
-                            "command": "EVENT_CAMERA_LOCK",
-                            "args": {
-                                "speed": "0"
-                            }
-                        },
-                        {
-                            "id": "85ce93d8-b4b6-47d1-afd8-29de0f2c3957",
-                            "command": "EVENT_END"
-                        }
-                    ]
-                },
                 {
                     "id": "03590a8d-7b53-4511-8aa6-e13f64abe156",
                     "x": 9,
@@ -2436,6 +2372,16 @@
             "height": 32,
             "actors": [
                 {
+                    "id": "c8d15bcc-77a7-4fc9-bf95-472260abf1c9",
+                    "spriteSheetId": "92107946-17c9-4a3c-a027-7680a7e3ec84",
+                    "x": 14,
+                    "y": 23,
+                    "movementType": "randomWalk",
+                    "direction": "down",
+                    "moveSpeed": "2",
+                    "animSpeed": "3"
+                },
+                {
                     "id": "5d50b25c-9e76-48a2-ba67-4ffefde3dbf8",
                     "spriteSheetId": "ed295d8b-2aff-4794-90ec-08c4fb05c518",
                     "x": 17,
@@ -2488,38 +2434,6 @@
                 }
             ],
             "triggers": [
-                {
-                    "id": "38f05733-400d-4687-b6cf-002e4ea63579",
-                    "x": 31,
-                    "y": 22,
-                    "width": 1,
-                    "height": 3,
-                    "trigger": "walk",
-                    "script": [
-                        {
-                            "id": "f20a4328-6d59-4671-9141-2bc2e949c197",
-                            "command": "EVENT_SWITCH_SCENE",
-                            "args": {
-                                "sceneId": "ae0b25d7-c249-4e73-a49e-bbdb493cda8e",
-                                "x": 14,
-                                "y": 15,
-                                "direction": "right",
-                                "fadeSpeed": "1"
-                            }
-                        },
-                        {
-                            "id": "c3c5c6f4-4944-49e0-8d61-f9d49e7f9c93",
-                            "command": "EVENT_CAMERA_LOCK",
-                            "args": {
-                                "speed": "0"
-                            }
-                        },
-                        {
-                            "id": "96e6dddc-934f-4ca1-acac-47063f300832",
-                            "command": "EVENT_END"
-                        }
-                    ]
-                },
                 {
                     "id": "7c37fd39-3bd5-4764-8d0c-386df0ff46c0",
                     "x": 13,
@@ -2938,11 +2852,21 @@
             "id": "92fd3001-bf17-47ec-b716-3c43092b9463",
             "name": "H3",
             "backgroundId": "0494a133-98da-4356-aa78-b916f94a324f",
-            "x": 1645.5,
-            "y": 851.5,
+            "x": 1659.5,
+            "y": 881.5,
             "width": 32,
             "height": 32,
             "actors": [
+                {
+                    "id": "c9066ce7-1b3e-47c9-8b54-e64bb3a533be",
+                    "spriteSheetId": "472889f2-ee07-4ca3-bf66-4607b6128d67",
+                    "x": 3,
+                    "y": 21,
+                    "movementType": "randomWalk",
+                    "direction": "down",
+                    "moveSpeed": "2",
+                    "animSpeed": "3"
+                },
                 {
                     "id": "df6c917a-529a-4df3-a207-d2c01a400f8c",
                     "spriteSheetId": "4821af08-eeb4-42d2-96fb-82cc73e3544a",
@@ -3141,38 +3065,6 @@
                         },
                         {
                             "id": "06fb71a4-2537-4388-9690-acfc7caa4763",
-                            "command": "EVENT_END"
-                        }
-                    ]
-                },
-                {
-                    "id": "4d8285fc-45a0-4dca-8785-d4de1879f04a",
-                    "x": 0,
-                    "y": 14,
-                    "width": 1,
-                    "height": 3,
-                    "trigger": "walk",
-                    "script": [
-                        {
-                            "id": "a6e3dd1b-ff43-442f-ba59-06b7adaa5053",
-                            "command": "EVENT_SWITCH_SCENE",
-                            "args": {
-                                "sceneId": "ae0b25d7-c249-4e73-a49e-bbdb493cda8e",
-                                "x": 29,
-                                "y": 15,
-                                "direction": "left",
-                                "fadeSpeed": "1"
-                            }
-                        },
-                        {
-                            "id": "746783ef-4f36-46b5-94ac-a017c0a44c94",
-                            "command": "EVENT_CAMERA_LOCK",
-                            "args": {
-                                "speed": "0"
-                            }
-                        },
-                        {
-                            "id": "85ce93d8-b4b6-47d1-afd8-29de0f2c3957",
                             "command": "EVENT_END"
                         }
                     ]
@@ -3445,11 +3337,21 @@
             "id": "1f014d0e-84e6-40db-98ab-7a15a7469527",
             "name": "H2",
             "backgroundId": "a7cb791e-326e-47e2-a1de-1ec79228ec90",
-            "x": 2484,
-            "y": 317,
+            "x": 1858,
+            "y": 253,
             "width": 32,
             "height": 32,
             "actors": [
+                {
+                    "id": "70bdddf7-2666-40f0-b3ca-d22a40478318",
+                    "spriteSheetId": "f91d623e-1a36-47fa-a167-d06fd0f19682",
+                    "x": 12,
+                    "y": 24,
+                    "movementType": "randomWalk",
+                    "direction": "down",
+                    "moveSpeed": "2",
+                    "animSpeed": "3"
+                },
                 {
                     "id": "a0e57cf7-ece2-441e-a7a8-a5d7417c3409",
                     "spriteSheetId": "ed295d8b-2aff-4794-90ec-08c4fb05c518",
@@ -3926,6 +3828,16 @@
             "width": 32,
             "height": 32,
             "actors": [
+                {
+                    "id": "ea46583f-0158-474b-aece-c31e87cc2ed6",
+                    "spriteSheetId": "3cb5aafd-38f1-4a96-a446-43b9dac83721",
+                    "x": 22,
+                    "y": 9,
+                    "movementType": "randomWalk",
+                    "direction": "down",
+                    "moveSpeed": "2",
+                    "animSpeed": "3"
+                },
                 {
                     "id": "b61ae6b2-c39c-4261-b3be-47b43cb4420d",
                     "spriteSheetId": "ed295d8b-2aff-4794-90ec-08c4fb05c518",
