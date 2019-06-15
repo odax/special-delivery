@@ -86,6 +86,22 @@
         {
             "id": "7",
             "name": "Balance"
+        },
+        {
+            "id": "6",
+            "name": "Deliveries Cancelled"
+        },
+        {
+            "id": "5",
+            "name": "Deliveries Completed"
+        },
+        {
+            "id": "4",
+            "name": "Cancelled Lost"
+        },
+        {
+            "id": "3",
+            "name": "Completed Gained"
         }
     ],
     "backgrounds": [
@@ -198,6 +214,16 @@
             "imageHeight": 256,
             "filename": "house4.png",
             "_v": 1560628817117
+        },
+        {
+            "id": "5978b4ee-4161-4394-af3d-78b1b1f51514",
+            "name": "menu",
+            "width": 20,
+            "height": 18,
+            "imageWidth": 160,
+            "imageHeight": 144,
+            "filename": "menu.png",
+            "_v": 1560630763299
         },
         {
             "id": "1e5f9d6a-bdbc-43e6-8c34-22f5bb5dea05",
@@ -2330,7 +2356,7 @@
                                     "id": "ca4be045-1ac4-462a-84e9-55320d8a6f8e",
                                     "command": "EVENT_SET_VALUE",
                                     "args": {
-                                        "variable": "7",
+                                        "variable": "6",
                                         "value": "0"
                                     }
                                 },
@@ -2338,7 +2364,23 @@
                                     "id": "eeb44295-9188-422d-897a-cdb42539ab68",
                                     "command": "EVENT_SET_VALUE",
                                     "args": {
-                                        "variable": "7",
+                                        "variable": "5",
+                                        "value": "0"
+                                    }
+                                },
+                                {
+                                    "id": "5841090c-d5f0-48a8-94f2-7e1089dd176d",
+                                    "command": "EVENT_SET_VALUE",
+                                    "args": {
+                                        "variable": "4",
+                                        "value": "0"
+                                    }
+                                },
+                                {
+                                    "id": "f0766b68-c214-49d5-b750-4a450af73506",
+                                    "command": "EVENT_SET_VALUE",
+                                    "args": {
+                                        "variable": "3",
                                         "value": "0"
                                     }
                                 },
@@ -2413,8 +2455,8 @@
             "id": "b338332f-11df-47dd-a604-d2f70c3611cd",
             "name": "H4",
             "backgroundId": "1054ac00-f59f-4542-9496-346a5d055538",
-            "x": 1276,
-            "y": 1195,
+            "x": 832,
+            "y": 1893,
             "width": 32,
             "height": 32,
             "actors": [
@@ -2920,8 +2962,8 @@
             "id": "92fd3001-bf17-47ec-b716-3c43092b9463",
             "name": "H3",
             "backgroundId": "0494a133-98da-4356-aa78-b916f94a324f",
-            "x": 1659.5,
-            "y": 881.5,
+            "x": 2691.5,
+            "y": 891.5,
             "width": 32,
             "height": 32,
             "actors": [
@@ -5989,7 +6031,7 @@
         {
             "id": "fbde33ba-001f-4d2c-9f4f-bb48830f9c9a",
             "name": "Stats",
-            "backgroundId": "1e5f9d6a-bdbc-43e6-8c34-22f5bb5dea05",
+            "backgroundId": "5978b4ee-4161-4394-af3d-78b1b1f51514",
             "x": 478,
             "y": 1068,
             "width": 20,
@@ -6017,33 +6059,144 @@
                 32,
                 1,
                 0,
-                18,
+                30,
                 0,
-                32,
-                1,
                 0,
-                18,
                 0,
-                32,
-                1,
                 0,
-                18,
                 0,
-                32,
-                1,
                 0,
-                18,
                 0,
-                32,
-                1,
                 0,
-                18,
                 0,
-                224,
-                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
                 0
             ],
             "script": [
+                {
+                    "id": "c8759e50-09e5-4b55-ae7f-40dba42faf9f",
+                    "command": "EVENT_SET_INPUT_SCRIPT",
+                    "args": {
+                        "input": "a"
+                    },
+                    "true": [
+                        {
+                            "id": "04940fb7-7dd6-4acd-9d55-8ab7193537a0",
+                            "command": "EVENT_IF_ACTOR_AT_POSITION",
+                            "args": {
+                                "actorId": "player",
+                                "x": 2,
+                                "y": 3
+                            },
+                            "true": [
+                                {
+                                    "id": "009df0b1-7c67-455b-bd6f-9be5a16c2042",
+                                    "command": "EVENT_TEXT",
+                                    "args": {
+                                        "text": "$05$ deliveries\ncompleted"
+                                    }
+                                },
+                                {
+                                    "id": "70a2f9f6-b811-441e-ab8e-e7372f9883df",
+                                    "command": "EVENT_TEXT",
+                                    "args": {
+                                        "text": "$03$ earned per\ndelivery"
+                                    }
+                                },
+                                {
+                                    "id": "5aa4956d-8634-49e1-bfa3-af850a15f216",
+                                    "command": "EVENT_END"
+                                }
+                            ],
+                            "false": [
+                                {
+                                    "id": "0009604a-0097-4f06-ae0c-87ed03954a90",
+                                    "command": "EVENT_END"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "f4cc5da4-ee23-41aa-a8ba-c5590c6e40fd",
+                            "command": "EVENT_IF_ACTOR_AT_POSITION",
+                            "args": {
+                                "actorId": "player",
+                                "x": 2,
+                                "y": 5
+                            },
+                            "true": [
+                                {
+                                    "id": "beb3864b-ffe4-45eb-ab55-b04c3f8caece",
+                                    "command": "EVENT_TEXT",
+                                    "args": {
+                                        "text": "$06$ deliveries\ncancelled"
+                                    }
+                                },
+                                {
+                                    "id": "6b1334fc-ff5d-4239-8590-5d3e46516d1e",
+                                    "command": "EVENT_TEXT",
+                                    "args": {
+                                        "text": "$04$ lost per\ncancellation"
+                                    }
+                                },
+                                {
+                                    "id": "1f79e0b2-3f42-4361-a4e8-baaa48dad6dc",
+                                    "command": "EVENT_END"
+                                }
+                            ],
+                            "false": [
+                                {
+                                    "id": "ae8ef8de-6f5f-4c61-8ccf-2a215a59098e",
+                                    "command": "EVENT_END"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "9ff12068-fce2-4712-8f49-b69aa8dea45f",
+                            "command": "EVENT_IF_ACTOR_AT_POSITION",
+                            "args": {
+                                "actorId": "player",
+                                "x": 2,
+                                "y": 7
+                            },
+                            "true": [
+                                {
+                                    "id": "d3cbf65b-9763-4939-911f-625a6ffbfeee",
+                                    "command": "EVENT_TEXT",
+                                    "args": {
+                                        "text": "$ $07$ total\nbalance"
+                                    }
+                                },
+                                {
+                                    "id": "86cb7791-43e0-4cb8-b4cc-de22bd64d1ec",
+                                    "command": "EVENT_END"
+                                }
+                            ],
+                            "false": [
+                                {
+                                    "id": "d9c3171c-ce60-4ab0-adef-37e868887bff",
+                                    "command": "EVENT_END"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "2bc6efb8-0a92-4f3a-9c01-3efb6037de65",
+                            "command": "EVENT_END"
+                        }
+                    ]
+                },
                 {
                     "id": "22ba9ac5-b317-4b7d-9a0d-b342611ff194",
                     "command": "EVENT_END"
