@@ -5,7 +5,7 @@
         "startX": 0,
         "startY": 0,
         "startDirection": "down",
-        "zoom": 100,
+        "zoom": 200,
         "startSceneId": "89702107-1594-424f-8c5b-a8afc7d3eb4c",
         "playerSpriteSheetId": "4909e8b7-9ecd-4d12-a61e-100329e5fe40",
         "startMoveSpeed": "3",
@@ -74,6 +74,14 @@
         {
             "id": "23",
             "name": "Cancel Delivery"
+        },
+        {
+            "id": "8",
+            "name": "Save Game"
+        },
+        {
+            "id": "9",
+            "name": "Load Game"
         }
     ],
     "backgrounds": [
@@ -2039,7 +2047,7 @@
                 0,
                 0,
                 0,
-                64,
+                0,
                 0,
                 0,
                 0,
@@ -2135,143 +2143,14 @@
         {
             "id": "2094d3ce-c062-4769-ba90-076bae788c93",
             "name": "Title",
-            "backgroundId": "efd54c60-d234-4307-8bcc-ada1ffc6dce6",
+            "backgroundId": "1e5f9d6a-bdbc-43e6-8c34-22f5bb5dea05",
             "x": 476,
             "y": 857,
-            "width": 32,
-            "height": 32,
+            "width": 20,
+            "height": 18,
             "actors": [],
             "triggers": [],
-            "collisions": [
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0,
-                0
-            ],
+            "collisions": [],
             "script": [
                 {
                     "id": "37cb18b9-78ef-45b7-91df-aba68d8aacaf",
@@ -2295,7 +2174,9 @@
                 {
                     "id": "7fc7be21-6d54-4ceb-8145-647e32d25e2c",
                     "command": "EVENT_LOOP",
-                    "args": {},
+                    "args": {
+                        "__label": "Game Selection"
+                    },
                     "true": [
                         {
                             "id": "0f38ace7-815e-4e59-b9bb-4b17bacc66c9",
@@ -2310,7 +2191,9 @@
                             "id": "a0cb79b2-4785-4c0a-9491-890ad8261f03",
                             "command": "EVENT_IF_TRUE",
                             "args": {
-                                "variable": "10"
+                                "variable": "10",
+                                "__collapseElse": true,
+                                "__label": "New Game"
                             },
                             "true": [
                                 {
@@ -5740,41 +5623,44 @@
                     "trigger": "walk",
                     "script": [
                         {
-                            "id": "8bfd3cda-19d3-4695-bff1-7177cb138cf6",
-                            "command": "EVENT_TEXT",
+                            "id": "1f1cd0fb-96c7-4658-8e5f-f26813ce4cd2",
+                            "command": "EVENT_CHOICE",
                             "args": {
-                                "text": "Press A to load\ngame"
+                                "variable": "9",
+                                "trueText": "Load Game",
+                                "falseText": "Cancel",
+                                "__label": "Load Game?"
                             }
                         },
                         {
-                            "id": "3e3cc53f-b138-4f7d-ae9e-dbce3779e75d",
-                            "command": "EVENT_SET_INPUT_SCRIPT",
+                            "id": "53c9305a-ac4e-4df1-b18b-0e1c7b68f23b",
+                            "command": "EVENT_IF_TRUE",
                             "args": {
-                                "input": "a"
+                                "variable": "9",
+                                "__label": "Yes Load",
+                                "__collapseElse": true,
+                                "__collapse": true
                             },
                             "true": [
                                 {
-                                    "id": "34052f03-7c51-44d4-8c22-a81d8f9d59f7",
+                                    "id": "0b8c286b-ca88-45c6-91d2-de96170e48ee",
                                     "command": "EVENT_LOAD_DATA",
                                     "args": {}
                                 },
                                 {
-                                    "id": "0023ffe8-c8c8-42ec-bc92-476720eb9eb6",
+                                    "id": "ac666bd7-f9e9-40fc-9848-e280344fb4c1",
+                                    "command": "EVENT_END"
+                                }
+                            ],
+                            "false": [
+                                {
+                                    "id": "e86bc513-b503-4e84-9659-162e713b7f5e",
                                     "command": "EVENT_END"
                                 }
                             ]
                         },
                         {
-                            "id": "6ead225d-0161-4838-ade2-5c23753066c7",
-                            "command": "EVENT_REMOVE_INPUT_SCRIPT",
-                            "args": {
-                                "input": [
-                                    "a"
-                                ]
-                            }
-                        },
-                        {
-                            "id": "6877d295-943b-4829-87f6-ca9c9df08e36",
+                            "id": "8ec9a567-ef5a-44cc-bf4f-ab5ac33cb464",
                             "command": "EVENT_END"
                         }
                     ]
@@ -5788,38 +5674,41 @@
                     "trigger": "walk",
                     "script": [
                         {
-                            "id": "5c526a9d-4a2a-480f-87e5-eacad055b29b",
-                            "command": "EVENT_TEXT",
+                            "id": "1ea6b07c-356c-4dea-a9b2-f15e08a9a2d2",
+                            "command": "EVENT_CHOICE",
                             "args": {
-                                "text": "Press A to save\ngame"
+                                "variable": "8",
+                                "trueText": "Save Game",
+                                "falseText": "Cancel",
+                                "__label": "Save Game?"
                             }
                         },
                         {
-                            "id": "d7cf5c47-ae21-45fb-a40f-2a82871de3d5",
-                            "command": "EVENT_SET_INPUT_SCRIPT",
+                            "id": "53ee9883-586a-4a3f-91f0-122358172306",
+                            "command": "EVENT_IF_TRUE",
                             "args": {
-                                "input": "a"
+                                "variable": "8",
+                                "__label": "Yes Save",
+                                "__collapseElse": true,
+                                "__collapse": true
                             },
                             "true": [
                                 {
-                                    "id": "fe18b0e5-fb46-4ba7-ae16-6ab66e9cd5c7",
+                                    "id": "d53fb167-c5a1-4928-938b-2e130375d915",
                                     "command": "EVENT_SAVE_DATA",
                                     "args": {}
                                 },
                                 {
-                                    "id": "b1c70749-87b9-455c-92c0-2f490a0514c8",
+                                    "id": "586d4245-3737-4276-bf87-600ca861204a",
+                                    "command": "EVENT_END"
+                                }
+                            ],
+                            "false": [
+                                {
+                                    "id": "b9247d15-f76c-4100-a8e5-c49a8827db3a",
                                     "command": "EVENT_END"
                                 }
                             ]
-                        },
-                        {
-                            "id": "404aa2ce-20aa-4b51-9a02-949a08ed8f03",
-                            "command": "EVENT_REMOVE_INPUT_SCRIPT",
-                            "args": {
-                                "input": [
-                                    "a"
-                                ]
-                            }
                         },
                         {
                             "id": "b1da3b44-3350-4e00-bd62-d59c60d9580e",
