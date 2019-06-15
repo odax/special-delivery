@@ -450,9 +450,9 @@
                     "id": "c5a18f61-2c23-4c1d-a79b-3647bfbab3c7",
                     "command": "EVENT_SWITCH_SCENE",
                     "args": {
-                        "sceneId": "5841d8ba-f089-4c4e-9e2f-eebe915b524e",
-                        "x": 0,
-                        "y": 0,
+                        "sceneId": "ae0b25d7-c249-4e73-a49e-bbdb493cda8e",
+                        "x": 9,
+                        "y": 9,
                         "direction": "",
                         "fadeSpeed": "2"
                     }
@@ -462,6 +462,54 @@
                     "command": "EVENT_END"
                 }
             ]
+        },
+        {
+            "id": "b338332f-11df-47dd-a604-d2f70c3611cd",
+            "name": "Square 5x1",
+            "backgroundId": "1e5f9d6a-bdbc-43e6-8c34-22f5bb5dea05",
+            "x": 451,
+            "y": 964,
+            "width": 20,
+            "height": 18,
+            "actors": [],
+            "triggers": [],
+            "collisions": []
+        },
+        {
+            "id": "92fd3001-bf17-47ec-b716-3c43092b9463",
+            "name": "Square 3x5",
+            "backgroundId": "1e5f9d6a-bdbc-43e6-8c34-22f5bb5dea05",
+            "x": 1119,
+            "y": 630,
+            "width": 20,
+            "height": 18,
+            "actors": [],
+            "triggers": [],
+            "collisions": []
+        },
+        {
+            "id": "1f014d0e-84e6-40db-98ab-7a15a7469527",
+            "name": "Square 0x4",
+            "backgroundId": "1e5f9d6a-bdbc-43e6-8c34-22f5bb5dea05",
+            "x": 962,
+            "y": 123,
+            "width": 20,
+            "height": 18,
+            "actors": [],
+            "triggers": [],
+            "collisions": []
+        },
+        {
+            "id": "e9d715cd-19a5-42c9-a19c-f31d6e3da849",
+            "name": "Square 2x0",
+            "backgroundId": "1e5f9d6a-bdbc-43e6-8c34-22f5bb5dea05",
+            "x": 288,
+            "y": 465,
+            "width": 20,
+            "height": 18,
+            "actors": [],
+            "triggers": [],
+            "collisions": []
         }
     ],
     "music": [
