@@ -889,22 +889,41 @@
                             "id": "80e6ddec-3ceb-48c5-80c4-4517fef0d4ac",
                             "command": "EVENT_IF_FALSE",
                             "args": {
-                                "variable": "13"
+                                "variable": "22"
                             },
                             "true": [
                                 {
-                                    "id": "abf0c1a9-3a23-45bc-ac1e-2bebe54edecf",
-                                    "command": "EVENT_PLAYER_SET_SPRITE",
+                                    "id": "f599ea9f-c70b-4144-aab5-ec93531bd44b",
+                                    "command": "EVENT_IF_FALSE",
                                     "args": {
-                                        "spriteSheetId": "afaa5cd9-ba1f-4f4e-9130-0e22702d9530"
-                                    }
-                                },
-                                {
-                                    "id": "97a79f44-2a7e-4c11-9ee9-a12a143bbabb",
-                                    "command": "EVENT_SET_TRUE",
-                                    "args": {
-                                        "variable": "15"
-                                    }
+                                        "variable": "10"
+                                    },
+                                    "true": [
+                                        {
+                                            "id": "abf0c1a9-3a23-45bc-ac1e-2bebe54edecf",
+                                            "command": "EVENT_PLAYER_SET_SPRITE",
+                                            "args": {
+                                                "spriteSheetId": "afaa5cd9-ba1f-4f4e-9130-0e22702d9530"
+                                            }
+                                        },
+                                        {
+                                            "id": "97a79f44-2a7e-4c11-9ee9-a12a143bbabb",
+                                            "command": "EVENT_SET_TRUE",
+                                            "args": {
+                                                "variable": "15"
+                                            }
+                                        },
+                                        {
+                                            "id": "c14243bf-fbce-4fed-829b-063be704d132",
+                                            "command": "EVENT_END"
+                                        }
+                                    ],
+                                    "false": [
+                                        {
+                                            "id": "e3744f98-0d5a-4a42-af1c-fe1584c39e5a",
+                                            "command": "EVENT_END"
+                                        }
+                                    ]
                                 },
                                 {
                                     "id": "faf5f94a-fa9f-474c-b90f-6556989dbcc0",
@@ -4507,7 +4526,8 @@
                             "command": "EVENT_IF_TRUE",
                             "args": {
                                 "variable": "10",
-                                "__collapseElse": false
+                                "__collapseElse": true,
+                                "__collapse": true
                             },
                             "true": [
                                 {
@@ -4834,7 +4854,7 @@
                                                     "id": "88bc90cc-9816-40ad-a483-01d753d4a9ce",
                                                     "command": "EVENT_GROUP",
                                                     "args": {
-                                                        "__collapse": true
+                                                        "__collapse": false
                                                     },
                                                     "true": [
                                                         {
@@ -4973,9 +4993,15 @@
                                                                                                                             },
                                                                                                                             "true": [
                                                                                                                                 {
-                                                                                                                                    "id": "6ab63faa-e255-4c42-b295-8c6a626316cc",
-                                                                                                                                    "command": "EVENT_STOP",
-                                                                                                                                    "args": {}
+                                                                                                                                    "id": "8d2baf90-5ef4-4624-95f5-d80adfae3185",
+                                                                                                                                    "command": "EVENT_SWITCH_SCENE",
+                                                                                                                                    "args": {
+                                                                                                                                        "sceneId": "e9d6291a-c5cc-4ef2-862f-877b2c5b18f8",
+                                                                                                                                        "x": 9,
+                                                                                                                                        "y": 9,
+                                                                                                                                        "direction": "down",
+                                                                                                                                        "fadeSpeed": "1"
+                                                                                                                                    }
                                                                                                                                 },
                                                                                                                                 {
                                                                                                                                     "id": "a5b30449-d091-4dac-9346-48be3b72af01",
@@ -5072,34 +5098,6 @@
                                                             "command": "EVENT_END"
                                                         }
                                                     ]
-                                                },
-                                                {
-                                                    "id": "58577a9d-5526-4394-bf55-a93ed54f16b3",
-                                                    "command": "EVENT_TEXT",
-                                                    "args": {
-                                                        "text": "Deliver food to\nHouse #$14$"
-                                                    }
-                                                },
-                                                {
-                                                    "id": "59c7c892-dbea-4966-a1bb-a4e85fcee7d0",
-                                                    "command": "EVENT_SET_TRUE",
-                                                    "args": {
-                                                        "variable": "16"
-                                                    }
-                                                },
-                                                {
-                                                    "id": "da808106-70ba-4970-acec-dac3c034f772",
-                                                    "command": "EVENT_SET_FALSE",
-                                                    "args": {
-                                                        "variable": "13"
-                                                    }
-                                                },
-                                                {
-                                                    "id": "a8c60801-838d-4f09-b677-2c0ae944e06b",
-                                                    "command": "EVENT_SET_FALSE",
-                                                    "args": {
-                                                        "variable": "22"
-                                                    }
                                                 },
                                                 {
                                                     "id": "eeba0529-e8bb-4d62-bacc-042f6a6ee24d",
@@ -5437,6 +5435,27 @@
                     "command": "EVENT_TEXT",
                     "args": {
                         "text": "Deliver food to\nHouse #$14$"
+                    }
+                },
+                {
+                    "id": "69612c84-38a0-4332-a265-1cc3124f93b9",
+                    "command": "EVENT_SET_TRUE",
+                    "args": {
+                        "variable": "16"
+                    }
+                },
+                {
+                    "id": "dde7d163-5463-4175-9d55-37d115a79aa2",
+                    "command": "EVENT_SET_FALSE",
+                    "args": {
+                        "variable": "13"
+                    }
+                },
+                {
+                    "id": "eea25986-5f7d-4453-9499-f658a3b6768c",
+                    "command": "EVENT_SET_FALSE",
+                    "args": {
+                        "variable": "22"
                     }
                 },
                 {
