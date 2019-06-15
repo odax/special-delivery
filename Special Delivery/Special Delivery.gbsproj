@@ -5,7 +5,7 @@
         "startX": 9,
         "startY": 9,
         "startDirection": "left",
-        "zoom": 50,
+        "zoom": 200,
         "startSceneId": "89702107-1594-424f-8c5b-a8afc7d3eb4c",
         "playerSpriteSheetId": "4909e8b7-9ecd-4d12-a61e-100329e5fe40",
         "startMoveSpeed": "3",
@@ -388,7 +388,56 @@
             "width": 32,
             "height": 32,
             "actors": [],
-            "triggers": [],
+            "triggers": [
+                {
+                    "id": "7f44a6db-1318-480f-824e-73916ac055bb",
+                    "x": 31,
+                    "y": 8,
+                    "width": 1,
+                    "height": 4,
+                    "trigger": "walk"
+                },
+                {
+                    "id": "d27ac917-d617-4088-aa80-b17009411a59",
+                    "x": 13,
+                    "y": 31,
+                    "width": 5,
+                    "height": 1,
+                    "trigger": "walk",
+                    "script": [
+                        {
+                            "id": "0c9aaf6a-ea38-4cb7-b531-a3ad86530354",
+                            "command": "EVENT_SWITCH_SCENE",
+                            "args": {
+                                "sceneId": "2871b5ec-a917-4c7d-bc81-917a77230750",
+                                "x": 14,
+                                "y": 1,
+                                "direction": "down",
+                                "fadeSpeed": "1"
+                            }
+                        },
+                        {
+                            "id": "432a5f8a-48ff-4257-8542-b45678116374",
+                            "command": "EVENT_CAMERA_LOCK",
+                            "args": {
+                                "speed": "0"
+                            }
+                        },
+                        {
+                            "id": "37065c0f-0b1d-4232-865a-925a724cec69",
+                            "command": "EVENT_END"
+                        }
+                    ]
+                },
+                {
+                    "id": "9d0d7f39-b466-4c89-ad2d-dddb6e75a8b1",
+                    "x": 1,
+                    "y": 22,
+                    "width": 3,
+                    "height": 3,
+                    "trigger": "walk"
+                }
+            ],
             "collisions": [
                 0,
                 0,
@@ -474,24 +523,24 @@
                 16,
                 4,
                 0,
-                0,
-                16,
+                255,
+                31,
                 4,
                 0,
-                0,
-                0,
-                4,
-                0,
-                0,
+                1,
                 0,
                 4,
                 0,
-                0,
+                1,
                 0,
                 4,
                 0,
+                1,
                 0,
-                16,
+                4,
+                0,
+                255,
+                31,
                 4,
                 0,
                 0,
@@ -529,7 +578,24 @@
             "width": 32,
             "height": 32,
             "actors": [],
-            "triggers": [],
+            "triggers": [
+                {
+                    "id": "07d07d28-e2a6-4032-85af-fc3e8b6b4069",
+                    "x": 31,
+                    "y": 8,
+                    "width": 1,
+                    "height": 4,
+                    "trigger": "walk"
+                },
+                {
+                    "id": "33b1da83-0dba-4bf4-89b2-3e39d36aa283",
+                    "x": 0,
+                    "y": 8,
+                    "width": 1,
+                    "height": 4,
+                    "trigger": "walk"
+                }
+            ],
             "collisions": [
                 0,
                 0,
@@ -586,35 +652,35 @@
                 0,
                 0,
                 132,
-                32,
+                160,
                 0,
                 0,
                 132,
-                32,
+                160,
                 0,
                 0,
                 132,
-                63,
+                191,
                 0,
                 0,
                 12,
-                32,
+                160,
                 0,
                 0,
                 8,
-                32,
+                160,
                 0,
                 0,
                 8,
-                32,
+                160,
                 0,
                 0,
                 24,
-                0,
+                128,
                 0,
                 0,
                 16,
-                0,
+                128,
                 0,
                 0,
                 48,
@@ -646,11 +712,11 @@
                 0,
                 0,
                 0,
-                12,
+                140,
                 0,
                 0,
                 0,
-                56,
+                184,
                 0,
                 0,
                 0,
@@ -1283,6 +1349,38 @@
             "height": 32,
             "actors": [],
             "triggers": [
+                {
+                    "id": "5c571213-c7f9-4c5a-bd30-a65d018f3ffa",
+                    "x": 12,
+                    "y": 0,
+                    "width": 5,
+                    "height": 1,
+                    "trigger": "walk",
+                    "script": [
+                        {
+                            "id": "3082966f-4ece-414d-a990-dde20cb76ab8",
+                            "command": "EVENT_SWITCH_SCENE",
+                            "args": {
+                                "sceneId": "5841d8ba-f089-4c4e-9e2f-eebe915b524e",
+                                "x": 15,
+                                "y": 30,
+                                "direction": "up",
+                                "fadeSpeed": "1"
+                            }
+                        },
+                        {
+                            "id": "79cad466-0b17-4183-8549-5a010d84b4d0",
+                            "command": "EVENT_CAMERA_LOCK",
+                            "args": {
+                                "speed": "0"
+                            }
+                        },
+                        {
+                            "id": "37065c0f-0b1d-4232-865a-925a724cec69",
+                            "command": "EVENT_END"
+                        }
+                    ]
+                },
                 {
                     "id": "03b900ce-808b-457d-b896-dbc2a85a159c",
                     "x": 0,
@@ -3789,7 +3887,7 @@
                     "x": 31,
                     "y": 14,
                     "width": 1,
-                    "height": 3,
+                    "height": 4,
                     "trigger": "walk",
                     "script": [
                         {
