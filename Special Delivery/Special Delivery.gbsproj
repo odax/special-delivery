@@ -5,7 +5,7 @@
         "startX": 0,
         "startY": 0,
         "startDirection": "down",
-        "zoom": 200,
+        "zoom": 100,
         "startSceneId": "89702107-1594-424f-8c5b-a8afc7d3eb4c",
         "playerSpriteSheetId": "4909e8b7-9ecd-4d12-a61e-100329e5fe40",
         "startMoveSpeed": "3",
