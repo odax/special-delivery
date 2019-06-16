@@ -5,7 +5,7 @@
         "startX": 0,
         "startY": 0,
         "startDirection": "down",
-        "zoom": 100,
+        "zoom": 50,
         "startSceneId": "89702107-1594-424f-8c5b-a8afc7d3eb4c",
         "playerSpriteSheetId": "4909e8b7-9ecd-4d12-a61e-100329e5fe40",
         "startMoveSpeed": "3",
@@ -118,6 +118,10 @@
         {
             "id": "1",
             "name": "Hidden Alley #"
+        },
+        {
+            "id": "26",
+            "name": "Hidden Spot Revealed"
         }
     ],
     "backgrounds": [
@@ -140,6 +144,26 @@
             "imageHeight": 256,
             "filename": "A2.png",
             "_v": 1560715832114
+        },
+        {
+            "id": "bcc03662-ea5c-46fa-9f82-d9b147477f21",
+            "name": "B1",
+            "width": 32,
+            "height": 32,
+            "imageWidth": 256,
+            "imageHeight": 256,
+            "filename": "B1.png",
+            "_v": 1560715832115
+        },
+        {
+            "id": "d1206255-968a-4e62-bffa-1ca46785a635",
+            "name": "B2",
+            "width": 32,
+            "height": 32,
+            "imageWidth": 256,
+            "imageHeight": 256,
+            "filename": "B2.png",
+            "_v": 1560715832115
         },
         {
             "id": "9c1fc5dd-d28b-484a-b6f3-d16129aa6745",
@@ -169,26 +193,6 @@
             "imageWidth": 256,
             "imageHeight": 256,
             "filename": "a5.png",
-            "_v": 1560715832115
-        },
-        {
-            "id": "bcc03662-ea5c-46fa-9f82-d9b147477f21",
-            "name": "B1",
-            "width": 32,
-            "height": 32,
-            "imageWidth": 256,
-            "imageHeight": 256,
-            "filename": "B1.png",
-            "_v": 1560715832115
-        },
-        {
-            "id": "d1206255-968a-4e62-bffa-1ca46785a635",
-            "name": "B2",
-            "width": 32,
-            "height": 32,
-            "imageWidth": 256,
-            "imageHeight": 256,
-            "filename": "B2.png",
             "_v": 1560715832115
         },
         {
@@ -290,6 +294,16 @@
             "imageHeight": 256,
             "filename": "d4.png",
             "_v": 1560715832115
+        },
+        {
+            "id": "45f73c31-b53b-4d19-899b-2fd86a70e3b2",
+            "name": "e1",
+            "width": 32,
+            "height": 32,
+            "imageWidth": 256,
+            "imageHeight": 256,
+            "filename": "e1.png",
+            "_v": 1560718604017
         },
         {
             "id": "74ee22fe-2166-4097-b88a-dc59db45c2f5",
@@ -608,14 +622,6 @@
             "type": "static",
             "filename": "statue_upper.png",
             "_v": 1560715832122
-        },
-        {
-            "id": "a43540d6-38e9-4560-a3de-27e675801501",
-            "name": "title",
-            "numFrames": 10,
-            "type": "animated",
-            "filename": "title.png",
-            "_v": 1560715832122
         }
     ],
     "scenes": [
@@ -725,7 +731,9 @@
                                 "variable": "1",
                                 "operator": "==",
                                 "comparator": 1,
-                                "__collapseElse": false
+                                "__collapseElse": true,
+                                "__label": "Hidden Alley Here",
+                                "__collapse": false
                             },
                             "true": [
                                 {
@@ -733,7 +741,9 @@
                                     "command": "EVENT_IF_FALSE",
                                     "args": {
                                         "variable": "2",
-                                        "__collapseElse": true
+                                        "__collapseElse": true,
+                                        "__collapse": true,
+                                        "__label": "Visited Hidden Room"
                                     },
                                     "true": [
                                         {
@@ -777,14 +787,17 @@
                                     "command": "EVENT_IF_TRUE",
                                     "args": {
                                         "variable": "21",
-                                        "__collapseElse": true
+                                        "__collapseElse": true,
+                                        "__label": "Game Hint"
                                     },
                                     "true": [
                                         {
                                             "id": "e8bbbca7-e790-4c43-87d8-a8536b14633e",
                                             "command": "EVENT_IF_FALSE",
                                             "args": {
-                                                "variable": "16"
+                                                "variable": "16",
+                                                "__label": "No Delivery",
+                                                "__collapse": true
                                             },
                                             "true": [
                                                 {
@@ -805,7 +818,9 @@
                                                     "command": "EVENT_IF_FALSE",
                                                     "args": {
                                                         "variable": "2",
-                                                        "__collapseElse": true
+                                                        "__collapseElse": true,
+                                                        "__label": "Not Visited Hidden Room",
+                                                        "__collapse": true
                                                     },
                                                     "true": [
                                                         {
@@ -1019,9 +1034,18 @@
                     "command": "EVENT_IF_TRUE",
                     "args": {
                         "variable": "21",
-                        "__collapseElse": true
+                        "__collapseElse": true,
+                        "__label": "Game Hint",
+                        "__collapse": true
                     },
                     "true": [
+                        {
+                            "id": "cc2860a3-9be2-4e86-b472-ae853fe1c99a",
+                            "command": "EVENT_CAMERA_SHAKE",
+                            "args": {
+                                "time": 0.5
+                            }
+                        },
                         {
                             "id": "cb29f43f-e3cd-4028-a478-071f86e93bc7",
                             "command": "EVENT_ACTOR_SHOW",
@@ -1037,6 +1061,87 @@
                     "false": [
                         {
                             "id": "c0632636-7dac-46fd-824d-f1df56eddf9c",
+                            "command": "EVENT_END"
+                        }
+                    ]
+                },
+                {
+                    "id": "cea3a186-9565-4b42-9169-1894b03b076b",
+                    "command": "EVENT_IF_VALUE",
+                    "args": {
+                        "variable": "1",
+                        "operator": "==",
+                        "comparator": 1,
+                        "__collapseElse": true,
+                        "__label": "Hidden Alley Here",
+                        "__collapse": true
+                    },
+                    "true": [
+                        {
+                            "id": "b5bac837-2495-46c1-a8f3-b4592fc063f2",
+                            "command": "EVENT_IF_FALSE",
+                            "args": {
+                                "variable": "26",
+                                "__collapseElse": true,
+                                "__label": "Reveal Hidden Spot",
+                                "__collapse": true
+                            },
+                            "true": [
+                                {
+                                    "id": "a3c07ef1-562a-4553-ba52-fe7e85904546",
+                                    "command": "EVENT_IF_FALSE",
+                                    "args": {
+                                        "variable": "22",
+                                        "__collapseElse": true
+                                    },
+                                    "true": [
+                                        {
+                                            "id": "22c0d004-b848-43eb-88c6-bbe6d228eb70",
+                                            "command": "EVENT_CAMERA_SHAKE",
+                                            "args": {
+                                                "time": 0.5
+                                            }
+                                        },
+                                        {
+                                            "id": "d6776592-b37f-4cfd-bd66-27a066042604",
+                                            "command": "EVENT_SET_TRUE",
+                                            "args": {
+                                                "variable": "26",
+                                                "__collapse": true
+                                            }
+                                        },
+                                        {
+                                            "id": "d35f0f1c-21c8-46c7-aa4e-a0acd0d60a8c",
+                                            "command": "EVENT_END"
+                                        }
+                                    ],
+                                    "false": [
+                                        {
+                                            "id": "4fa028e8-45b2-4c9b-b105-3e18a806f6e4",
+                                            "command": "EVENT_END"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "39da9fc1-bda8-4e7f-b516-eeb61bb04871",
+                                    "command": "EVENT_END"
+                                }
+                            ],
+                            "false": [
+                                {
+                                    "id": "7dd59fae-c06d-452f-bc09-c315ccbe6e37",
+                                    "command": "EVENT_END"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "67e799c2-6e1b-4e2a-8e21-b325c37f09db",
+                            "command": "EVENT_END"
+                        }
+                    ],
+                    "false": [
+                        {
+                            "id": "6f029ff8-6b99-4176-a7f5-7207590dc38b",
                             "command": "EVENT_END"
                         }
                     ]
@@ -4914,6 +5019,15 @@
                                     }
                                 },
                                 {
+                                    "id": "944d6bf7-673d-4829-9e3f-e47df6965df0",
+                                    "command": "EVENT_SET_FALSE",
+                                    "args": {
+                                        "variable": "26",
+                                        "__collapse": true,
+                                        "__label": "Hidden Spot Revealed"
+                                    }
+                                },
+                                {
                                     "id": "0ae17906-2bc7-492e-8fce-00f385bf9e41",
                                     "command": "EVENT_GROUP",
                                     "args": {
@@ -5050,8 +5164,8 @@
             "id": "b338332f-11df-47dd-a604-d2f70c3611cd",
             "name": "H4",
             "backgroundId": "1054ac00-f59f-4542-9496-346a5d055538",
-            "x": 816,
-            "y": 1695,
+            "x": 828,
+            "y": 1713.5,
             "width": 32,
             "height": 32,
             "actors": [
@@ -8199,6 +8313,13 @@
                                     ],
                                     "false": [
                                         {
+                                            "id": "fad1f6a4-02a3-4aa2-ad42-3cba15a54910",
+                                            "command": "EVENT_SET_FALSE",
+                                            "args": {
+                                                "variable": "26"
+                                            }
+                                        },
+                                        {
                                             "id": "33031510-510c-4f0a-ba9d-7521b672b88e",
                                             "command": "EVENT_GROUP",
                                             "args": {
@@ -8827,6 +8948,13 @@
                                                         }
                                                     ],
                                                     "false": [
+                                                        {
+                                                            "id": "fb8896b2-a3a6-4e9a-bfca-3ea795b021a5",
+                                                            "command": "EVENT_SET_FALSE",
+                                                            "args": {
+                                                                "variable": "26"
+                                                            }
+                                                        },
                                                         {
                                                             "id": "49a7913a-733d-4ae8-ae7d-c5bfacebab4f",
                                                             "command": "EVENT_GROUP",
@@ -10009,6 +10137,18 @@
             "y": 253,
             "width": 20,
             "height": 18,
+            "actors": [],
+            "triggers": [],
+            "collisions": []
+        },
+        {
+            "id": "39143d0b-b6db-4b3d-b3e7-d11890401961",
+            "name": "E1",
+            "backgroundId": "45f73c31-b53b-4d19-899b-2fd86a70e3b2",
+            "x": 1086.5,
+            "y": 1707.5,
+            "width": 32,
+            "height": 32,
             "actors": [],
             "triggers": [],
             "collisions": []
