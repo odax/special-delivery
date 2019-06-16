@@ -2,11 +2,11 @@
     "settings": {
         "showCollisions": true,
         "showConnections": true,
-        "startX": 6,
-        "startY": 24,
+        "startX": 0,
+        "startY": 0,
         "startDirection": "down",
         "zoom": 100,
-        "startSceneId": "39143d0b-b6db-4b3d-b3e7-d11890401961",
+        "startSceneId": "89702107-1594-424f-8c5b-a8afc7d3eb4c",
         "playerSpriteSheetId": "4909e8b7-9ecd-4d12-a61e-100329e5fe40",
         "startMoveSpeed": "3",
         "startAnimSpeed": "4"
@@ -778,7 +778,7 @@
                                     "command": "EVENT_IF_FALSE",
                                     "args": {
                                         "variable": "2",
-                                        "__collapseElse": true,
+                                        "__collapseElse": false,
                                         "__collapse": false,
                                         "__label": "Not Visited Hidden Room"
                                     },
@@ -788,9 +788,9 @@
                                             "command": "EVENT_IF_TRUE",
                                             "args": {
                                                 "variable": "16",
-                                                "__collapseElse": true,
+                                                "__collapseElse": false,
                                                 "__label": "Carrying Delivery",
-                                                "__collapse": true
+                                                "__collapse": false
                                             },
                                             "true": [
                                                 {
@@ -1302,67 +1302,86 @@
                     "trigger": "walk",
                     "script": [
                         {
-                            "id": "4cad099a-2f21-46ef-9f0c-936cfa786f20",
+                            "id": "f956ef4c-9b2f-48c7-acaf-e1c674e65990",
                             "command": "EVENT_IF_VALUE",
                             "args": {
                                 "variable": "1",
                                 "operator": "==",
                                 "comparator": 2,
-                                "__collapseElse": true
+                                "__collapseElse": true,
+                                "__label": "Hidden Alley Here",
+                                "__collapse": false
                             },
                             "true": [
                                 {
-                                    "id": "fd22324c-77db-4178-93a8-2cf7be9d0a9a",
+                                    "id": "08c1eb4f-b7fe-40fc-93dd-379c22f6524e",
                                     "command": "EVENT_IF_FALSE",
                                     "args": {
                                         "variable": "2",
-                                        "__collapseElse": true
+                                        "__collapseElse": true,
+                                        "__collapse": true,
+                                        "__label": "Not Visited Hidden Room"
                                     },
                                     "true": [
                                         {
-                                            "id": "b35b991d-7abe-429a-bb11-83f0f0172ca1",
-                                            "command": "EVENT_SET_TRUE",
+                                            "id": "273301d7-5628-42aa-b353-5028e830de6c",
+                                            "command": "EVENT_IF_TRUE",
                                             "args": {
-                                                "variable": "2"
-                                            }
+                                                "variable": "16",
+                                                "__collapseElse": true,
+                                                "__label": "Carrying Delivery",
+                                                "__collapse": true
+                                            },
+                                            "true": [
+                                                {
+                                                    "id": "3911822b-239f-4921-8edc-a9adc950e8c1",
+                                                    "command": "EVENT_SWITCH_SCENE",
+                                                    "args": {
+                                                        "sceneId": "36b3249a-3dcb-4b26-a747-6ca82cdfdab7",
+                                                        "x": 9,
+                                                        "y": 9,
+                                                        "direction": "up",
+                                                        "fadeSpeed": "1"
+                                                    }
+                                                },
+                                                {
+                                                    "id": "ed828db7-2320-4c4a-a5b2-406623f374c2",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ],
+                                            "false": [
+                                                {
+                                                    "id": "4b5291a3-42a0-4fe2-b8a4-4dc6523ccfd0",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ]
                                         },
                                         {
-                                            "id": "97989457-3ad9-4e16-ac0e-f36762bfe8ea",
-                                            "command": "EVENT_SWITCH_SCENE",
-                                            "args": {
-                                                "sceneId": "36b3249a-3dcb-4b26-a747-6ca82cdfdab7",
-                                                "x": 9,
-                                                "y": 9,
-                                                "direction": "up",
-                                                "fadeSpeed": "1"
-                                            }
-                                        },
-                                        {
-                                            "id": "99da8511-4be9-4e2f-bf94-63c3f27d3a06",
+                                            "id": "35f7fad4-f31e-4714-b5a3-441f04f4c9dc",
                                             "command": "EVENT_END"
                                         }
                                     ],
                                     "false": [
                                         {
-                                            "id": "63c7d44d-4427-4412-bb35-fd9b71ee7ae9",
+                                            "id": "12bdeb02-2ce3-418e-a2b1-aacef8143e30",
                                             "command": "EVENT_END"
                                         }
                                     ]
                                 },
                                 {
-                                    "id": "1601c40e-d809-4a14-93e3-8d717287c68e",
+                                    "id": "3b6e6d54-a389-4414-8849-db6436a1bff0",
                                     "command": "EVENT_END"
                                 }
                             ],
                             "false": [
                                 {
-                                    "id": "1d71788f-8de0-465f-be59-217fb023ef47",
+                                    "id": "6afba955-bc8b-454e-ac29-7d3ff68eae1a",
                                     "command": "EVENT_END"
                                 }
                             ]
                         },
                         {
-                            "id": "86b3608e-5a60-48dd-93da-c1fb6f2482cf",
+                            "id": "1920d9a1-208b-4e93-baca-20129d5df488",
                             "command": "EVENT_END"
                         }
                     ]
@@ -1679,7 +1698,92 @@
                     "y": 24,
                     "width": 3,
                     "height": 5,
-                    "trigger": "walk"
+                    "trigger": "walk",
+                    "script": [
+                        {
+                            "id": "b8e60a80-3764-4682-b44e-cae1ecf73708",
+                            "command": "EVENT_IF_VALUE",
+                            "args": {
+                                "variable": "1",
+                                "operator": "==",
+                                "comparator": 6,
+                                "__collapseElse": true,
+                                "__label": "Hidden Alley Here",
+                                "__collapse": false
+                            },
+                            "true": [
+                                {
+                                    "id": "56a8a804-a280-4a73-95ff-708b637e57ba",
+                                    "command": "EVENT_IF_FALSE",
+                                    "args": {
+                                        "variable": "2",
+                                        "__collapseElse": true,
+                                        "__collapse": true,
+                                        "__label": "Not Visited Hidden Room"
+                                    },
+                                    "true": [
+                                        {
+                                            "id": "935befa1-2dce-4e23-86fc-220387ebac70",
+                                            "command": "EVENT_IF_TRUE",
+                                            "args": {
+                                                "variable": "16",
+                                                "__collapseElse": true,
+                                                "__label": "Carrying Delivery",
+                                                "__collapse": true
+                                            },
+                                            "true": [
+                                                {
+                                                    "id": "d1a811a5-8e00-4144-84ed-94c49f3568b5",
+                                                    "command": "EVENT_SWITCH_SCENE",
+                                                    "args": {
+                                                        "sceneId": "36b3249a-3dcb-4b26-a747-6ca82cdfdab7",
+                                                        "x": 9,
+                                                        "y": 9,
+                                                        "direction": "up",
+                                                        "fadeSpeed": "1"
+                                                    }
+                                                },
+                                                {
+                                                    "id": "d6b807b6-11a7-4dbf-8dcf-1b0330fc0288",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ],
+                                            "false": [
+                                                {
+                                                    "id": "87147f13-d0e5-4f8e-9700-2dec5e10b98f",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "id": "68a5c30d-4af6-41b0-b27b-e7ee1e150bdd",
+                                            "command": "EVENT_END"
+                                        }
+                                    ],
+                                    "false": [
+                                        {
+                                            "id": "b5fee7cc-25e0-4016-8fe4-32a855f75c0f",
+                                            "command": "EVENT_END"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "a46d4337-aed3-4c60-aa58-15e41695c1f8",
+                                    "command": "EVENT_END"
+                                }
+                            ],
+                            "false": [
+                                {
+                                    "id": "debf9f11-5ef6-4927-90ce-c2e0b228de53",
+                                    "command": "EVENT_END"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "a18516a3-0092-4230-9984-5044209d532d",
+                            "command": "EVENT_END"
+                        }
+                    ]
                 },
                 {
                     "id": "07a461a9-715d-44ff-bb47-763842b982f1",
@@ -2453,7 +2557,92 @@
                     "y": 19,
                     "width": 2,
                     "height": 3,
-                    "trigger": "walk"
+                    "trigger": "walk",
+                    "script": [
+                        {
+                            "id": "2d9c52b7-73b3-4a0b-95c4-0248e5a654fc",
+                            "command": "EVENT_IF_VALUE",
+                            "args": {
+                                "variable": "1",
+                                "operator": "==",
+                                "comparator": 5,
+                                "__collapseElse": true,
+                                "__label": "Hidden Alley Here",
+                                "__collapse": false
+                            },
+                            "true": [
+                                {
+                                    "id": "47e092f6-22f1-49c0-a4e5-903304bd93d9",
+                                    "command": "EVENT_IF_FALSE",
+                                    "args": {
+                                        "variable": "2",
+                                        "__collapseElse": true,
+                                        "__collapse": true,
+                                        "__label": "Not Visited Hidden Room"
+                                    },
+                                    "true": [
+                                        {
+                                            "id": "889d224f-3b96-4eba-ab8e-063599468f98",
+                                            "command": "EVENT_IF_TRUE",
+                                            "args": {
+                                                "variable": "16",
+                                                "__collapseElse": true,
+                                                "__label": "Carrying Delivery",
+                                                "__collapse": true
+                                            },
+                                            "true": [
+                                                {
+                                                    "id": "41da7f3a-6a89-4ace-bc85-5e19a3e62d2f",
+                                                    "command": "EVENT_SWITCH_SCENE",
+                                                    "args": {
+                                                        "sceneId": "36b3249a-3dcb-4b26-a747-6ca82cdfdab7",
+                                                        "x": 9,
+                                                        "y": 9,
+                                                        "direction": "up",
+                                                        "fadeSpeed": "1"
+                                                    }
+                                                },
+                                                {
+                                                    "id": "91c216c4-f5d9-48ae-be65-5a2e35d71499",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ],
+                                            "false": [
+                                                {
+                                                    "id": "811456e8-eb54-49f2-8659-e91c601bc5b4",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "id": "97b49bac-e653-43b1-9c15-5cbacc284fd5",
+                                            "command": "EVENT_END"
+                                        }
+                                    ],
+                                    "false": [
+                                        {
+                                            "id": "dab3f994-93ef-4579-98c5-c8b2f02b5b2a",
+                                            "command": "EVENT_END"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "2b522312-be06-4dbe-8a3e-bd330b406a54",
+                                    "command": "EVENT_END"
+                                }
+                            ],
+                            "false": [
+                                {
+                                    "id": "f4a6fac0-aca7-40cf-ba5d-42293c02fb11",
+                                    "command": "EVENT_END"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "27b6cc68-edaa-44fc-8985-4aa45ec3d86d",
+                            "command": "EVENT_END"
+                        }
+                    ]
                 },
                 {
                     "id": "d2f22197-ca87-4a09-8ec5-e11f0574d0ef",
@@ -3169,67 +3358,86 @@
                     "trigger": "walk",
                     "script": [
                         {
-                            "id": "5e7e3c89-5a81-4a55-a4bb-d9c7ec90d1ff",
+                            "id": "c8fdb2a5-457e-4371-85cc-b7de82ede762",
                             "command": "EVENT_IF_VALUE",
                             "args": {
                                 "variable": "1",
                                 "operator": "==",
                                 "comparator": 3,
-                                "__collapseElse": true
+                                "__collapseElse": true,
+                                "__label": "Hidden Alley Here",
+                                "__collapse": false
                             },
                             "true": [
                                 {
-                                    "id": "c2b0b53a-6a0a-4fc2-b4ea-b0cd50ce12ef",
+                                    "id": "85298b5f-4ac9-4d0d-92e5-750a10bda981",
                                     "command": "EVENT_IF_FALSE",
                                     "args": {
                                         "variable": "2",
-                                        "__collapseElse": true
+                                        "__collapseElse": true,
+                                        "__collapse": true,
+                                        "__label": "Not Visited Hidden Room"
                                     },
                                     "true": [
                                         {
-                                            "id": "b07a6381-f83e-4388-8da5-89fb62d62150",
-                                            "command": "EVENT_SET_TRUE",
+                                            "id": "b450fa53-2d64-4cc6-9449-6aed65dbc450",
+                                            "command": "EVENT_IF_TRUE",
                                             "args": {
-                                                "variable": "2"
-                                            }
+                                                "variable": "16",
+                                                "__collapseElse": true,
+                                                "__label": "Carrying Delivery",
+                                                "__collapse": true
+                                            },
+                                            "true": [
+                                                {
+                                                    "id": "8cd2d1e5-9538-469f-bb9b-56e470db689c",
+                                                    "command": "EVENT_SWITCH_SCENE",
+                                                    "args": {
+                                                        "sceneId": "36b3249a-3dcb-4b26-a747-6ca82cdfdab7",
+                                                        "x": 9,
+                                                        "y": 9,
+                                                        "direction": "up",
+                                                        "fadeSpeed": "1"
+                                                    }
+                                                },
+                                                {
+                                                    "id": "417f5493-599a-4aa5-aef7-163791a84a85",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ],
+                                            "false": [
+                                                {
+                                                    "id": "0d6f2dcf-4272-4b58-8f48-d9d2aa4af66b",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ]
                                         },
                                         {
-                                            "id": "4fb6c740-1a0e-459e-90c6-5644db02db8a",
-                                            "command": "EVENT_SWITCH_SCENE",
-                                            "args": {
-                                                "sceneId": "36b3249a-3dcb-4b26-a747-6ca82cdfdab7",
-                                                "x": 9,
-                                                "y": 9,
-                                                "direction": "up",
-                                                "fadeSpeed": "1"
-                                            }
-                                        },
-                                        {
-                                            "id": "1892ada4-3195-45b4-ac6a-5aa2cb687944",
+                                            "id": "ca8476b7-9246-48e7-88c3-bf2728f9dbd5",
                                             "command": "EVENT_END"
                                         }
                                     ],
                                     "false": [
                                         {
-                                            "id": "f6bd86f1-09ed-41fc-8ca6-20ada440b4e7",
+                                            "id": "5fa7aa67-dc3c-4896-a753-7649c33c3fc5",
                                             "command": "EVENT_END"
                                         }
                                     ]
                                 },
                                 {
-                                    "id": "2dd27b22-9f7b-4505-8911-7fd707a17b84",
+                                    "id": "970db2ef-2d0f-43b8-94bd-943799f6fd58",
                                     "command": "EVENT_END"
                                 }
                             ],
                             "false": [
                                 {
-                                    "id": "0fab2cc2-6995-4948-b0a6-c4fdc7bb2873",
+                                    "id": "3ffd9884-e37f-4b43-9cc0-ae1f80781d0a",
                                     "command": "EVENT_END"
                                 }
                             ]
                         },
                         {
-                            "id": "20e0c30d-be1a-4cf1-ae8c-2fc416140bfa",
+                            "id": "2b371b50-b0aa-4345-b7a8-e15cfba38a92",
                             "command": "EVENT_END"
                         }
                     ]
@@ -3591,7 +3799,92 @@
                     "y": 2,
                     "width": 5,
                     "height": 2,
-                    "trigger": "walk"
+                    "trigger": "walk",
+                    "script": [
+                        {
+                            "id": "a2d2e826-b6e9-4f6e-871f-d810c77316ed",
+                            "command": "EVENT_IF_VALUE",
+                            "args": {
+                                "variable": "1",
+                                "operator": "==",
+                                "comparator": 15,
+                                "__collapseElse": true,
+                                "__label": "Hidden Alley Here",
+                                "__collapse": false
+                            },
+                            "true": [
+                                {
+                                    "id": "4837678d-1453-4b84-ba15-d0cfb17ce7e6",
+                                    "command": "EVENT_IF_FALSE",
+                                    "args": {
+                                        "variable": "2",
+                                        "__collapseElse": true,
+                                        "__collapse": true,
+                                        "__label": "Not Visited Hidden Room"
+                                    },
+                                    "true": [
+                                        {
+                                            "id": "42ad6cfa-64f7-427a-84ab-c432e3de89e5",
+                                            "command": "EVENT_IF_TRUE",
+                                            "args": {
+                                                "variable": "16",
+                                                "__collapseElse": true,
+                                                "__label": "Carrying Delivery",
+                                                "__collapse": true
+                                            },
+                                            "true": [
+                                                {
+                                                    "id": "869b386f-d138-435c-82b3-198e9c63aeba",
+                                                    "command": "EVENT_SWITCH_SCENE",
+                                                    "args": {
+                                                        "sceneId": "36b3249a-3dcb-4b26-a747-6ca82cdfdab7",
+                                                        "x": 9,
+                                                        "y": 9,
+                                                        "direction": "up",
+                                                        "fadeSpeed": "1"
+                                                    }
+                                                },
+                                                {
+                                                    "id": "3f77413d-a0b7-45a5-ba28-5b407a95168f",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ],
+                                            "false": [
+                                                {
+                                                    "id": "3b3da8ca-9072-4a8b-bb8e-842ca13e9375",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "id": "add6deb7-52f7-419d-8194-2066e2a5febe",
+                                            "command": "EVENT_END"
+                                        }
+                                    ],
+                                    "false": [
+                                        {
+                                            "id": "29319c0d-1179-4794-b97c-933918e2e9e3",
+                                            "command": "EVENT_END"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "157cdccb-6ab3-4947-86e5-861bbf1afb1f",
+                                    "command": "EVENT_END"
+                                }
+                            ],
+                            "false": [
+                                {
+                                    "id": "20c7828c-d87d-4bab-9710-75eb21fd396c",
+                                    "command": "EVENT_END"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "4479713b-db1b-493f-a993-f47504299b3b",
+                            "command": "EVENT_END"
+                        }
+                    ]
                 },
                 {
                     "id": "a196fd32-c6f2-4f9d-a8c6-2ccc3fce45e5",
@@ -3952,7 +4245,92 @@
                     "y": 10,
                     "width": 5,
                     "height": 2,
-                    "trigger": "walk"
+                    "trigger": "walk",
+                    "script": [
+                        {
+                            "id": "acd0a344-592d-427a-8af4-830cf1786a2a",
+                            "command": "EVENT_IF_VALUE",
+                            "args": {
+                                "variable": "1",
+                                "operator": "==",
+                                "comparator": 14,
+                                "__collapseElse": true,
+                                "__label": "Hidden Alley Here",
+                                "__collapse": false
+                            },
+                            "true": [
+                                {
+                                    "id": "56e08b49-8444-4918-98ea-0e45e7ec3950",
+                                    "command": "EVENT_IF_FALSE",
+                                    "args": {
+                                        "variable": "2",
+                                        "__collapseElse": true,
+                                        "__collapse": true,
+                                        "__label": "Not Visited Hidden Room"
+                                    },
+                                    "true": [
+                                        {
+                                            "id": "56680ac6-a309-4286-9521-38f72915717f",
+                                            "command": "EVENT_IF_TRUE",
+                                            "args": {
+                                                "variable": "16",
+                                                "__collapseElse": true,
+                                                "__label": "Carrying Delivery",
+                                                "__collapse": true
+                                            },
+                                            "true": [
+                                                {
+                                                    "id": "0f617b2a-bde7-455c-8426-8d3f90accfe6",
+                                                    "command": "EVENT_SWITCH_SCENE",
+                                                    "args": {
+                                                        "sceneId": "36b3249a-3dcb-4b26-a747-6ca82cdfdab7",
+                                                        "x": 9,
+                                                        "y": 9,
+                                                        "direction": "up",
+                                                        "fadeSpeed": "1"
+                                                    }
+                                                },
+                                                {
+                                                    "id": "b114de96-2d9e-408d-ad4c-232f9d7523b4",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ],
+                                            "false": [
+                                                {
+                                                    "id": "d638d8fc-724b-431e-8a6e-a0f593aa0f51",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "id": "61aef995-dd30-4dbc-a4f1-9d2c99e340c2",
+                                            "command": "EVENT_END"
+                                        }
+                                    ],
+                                    "false": [
+                                        {
+                                            "id": "feba037d-7f33-436b-ad5b-7fd0f5f67056",
+                                            "command": "EVENT_END"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "be87af82-7264-4dcc-8145-9013ebfbe9f0",
+                                    "command": "EVENT_END"
+                                }
+                            ],
+                            "false": [
+                                {
+                                    "id": "038fc711-a652-4dea-88fb-269e23cdc6e4",
+                                    "command": "EVENT_END"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "38251aff-a0df-4d20-8838-0a0ebdf47bd6",
+                            "command": "EVENT_END"
+                        }
+                    ]
                 },
                 {
                     "id": "d1dc2df4-f614-4d5e-b94e-fc8c96139a4b",
@@ -4313,7 +4691,92 @@
                     "y": 27,
                     "width": 4,
                     "height": 2,
-                    "trigger": "walk"
+                    "trigger": "walk",
+                    "script": [
+                        {
+                            "id": "2d43a8d6-6c2d-4b2b-ba84-a1c6d67919c0",
+                            "command": "EVENT_IF_VALUE",
+                            "args": {
+                                "variable": "1",
+                                "operator": "==",
+                                "comparator": 13,
+                                "__collapseElse": true,
+                                "__label": "Hidden Alley Here",
+                                "__collapse": false
+                            },
+                            "true": [
+                                {
+                                    "id": "78ad854a-462b-40f0-a972-c2af4b1796e2",
+                                    "command": "EVENT_IF_FALSE",
+                                    "args": {
+                                        "variable": "2",
+                                        "__collapseElse": true,
+                                        "__collapse": true,
+                                        "__label": "Not Visited Hidden Room"
+                                    },
+                                    "true": [
+                                        {
+                                            "id": "8ff52f1d-afe6-4899-9d29-0a91d59d1da7",
+                                            "command": "EVENT_IF_TRUE",
+                                            "args": {
+                                                "variable": "16",
+                                                "__collapseElse": true,
+                                                "__label": "Carrying Delivery",
+                                                "__collapse": true
+                                            },
+                                            "true": [
+                                                {
+                                                    "id": "bfff373d-a0c7-487c-9db6-710b47792c53",
+                                                    "command": "EVENT_SWITCH_SCENE",
+                                                    "args": {
+                                                        "sceneId": "36b3249a-3dcb-4b26-a747-6ca82cdfdab7",
+                                                        "x": 9,
+                                                        "y": 9,
+                                                        "direction": "up",
+                                                        "fadeSpeed": "1"
+                                                    }
+                                                },
+                                                {
+                                                    "id": "6befefeb-4aed-4fbe-83b4-bece08a3dc2d",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ],
+                                            "false": [
+                                                {
+                                                    "id": "476fd62e-bf47-48b8-a941-437749792ea8",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "id": "1b3afc71-5501-4549-9f93-f57486df6bff",
+                                            "command": "EVENT_END"
+                                        }
+                                    ],
+                                    "false": [
+                                        {
+                                            "id": "2202d8b5-d9ae-4329-8246-acb94e302d1e",
+                                            "command": "EVENT_END"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "4785a9de-0683-4b49-82fd-3f8af56731f0",
+                                    "command": "EVENT_END"
+                                }
+                            ],
+                            "false": [
+                                {
+                                    "id": "c807017d-f681-4a60-b4c3-cf6e7722cdd4",
+                                    "command": "EVENT_END"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "c5bff2d8-b038-4aef-8221-c82fdbbbc07c",
+                            "command": "EVENT_END"
+                        }
+                    ]
                 },
                 {
                     "id": "0cfb55ae-d864-4bdc-9aff-2b8e4e8557dd",
@@ -4674,7 +5137,92 @@
                     "y": 15,
                     "width": 4,
                     "height": 2,
-                    "trigger": "walk"
+                    "trigger": "walk",
+                    "script": [
+                        {
+                            "id": "8f4f4c7d-a05a-4f66-91ef-e31dd3e65062",
+                            "command": "EVENT_IF_VALUE",
+                            "args": {
+                                "variable": "1",
+                                "operator": "==",
+                                "comparator": 12,
+                                "__collapseElse": true,
+                                "__label": "Hidden Alley Here",
+                                "__collapse": false
+                            },
+                            "true": [
+                                {
+                                    "id": "54096a3d-5ac7-4086-bca4-8266b678b813",
+                                    "command": "EVENT_IF_FALSE",
+                                    "args": {
+                                        "variable": "2",
+                                        "__collapseElse": true,
+                                        "__collapse": true,
+                                        "__label": "Not Visited Hidden Room"
+                                    },
+                                    "true": [
+                                        {
+                                            "id": "54582941-9b70-4ddf-9c40-f2c0704c7887",
+                                            "command": "EVENT_IF_TRUE",
+                                            "args": {
+                                                "variable": "16",
+                                                "__collapseElse": true,
+                                                "__label": "Carrying Delivery",
+                                                "__collapse": true
+                                            },
+                                            "true": [
+                                                {
+                                                    "id": "24b02b79-be57-4f56-8dc7-7796823125f1",
+                                                    "command": "EVENT_SWITCH_SCENE",
+                                                    "args": {
+                                                        "sceneId": "36b3249a-3dcb-4b26-a747-6ca82cdfdab7",
+                                                        "x": 9,
+                                                        "y": 9,
+                                                        "direction": "up",
+                                                        "fadeSpeed": "1"
+                                                    }
+                                                },
+                                                {
+                                                    "id": "64336be8-241d-400f-bef5-121c94bfd365",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ],
+                                            "false": [
+                                                {
+                                                    "id": "b7079045-cbd2-415c-a1de-6466ed1c26d1",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "id": "da19b43b-6cf4-409f-a4e0-d60f6f6b2239",
+                                            "command": "EVENT_END"
+                                        }
+                                    ],
+                                    "false": [
+                                        {
+                                            "id": "df0162c4-1f84-43f8-be6f-14f63248733c",
+                                            "command": "EVENT_END"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "2ef5aade-1600-4f69-9a63-306c26f506ee",
+                                    "command": "EVENT_END"
+                                }
+                            ],
+                            "false": [
+                                {
+                                    "id": "e66243ee-8c15-41f9-a635-22507869e77f",
+                                    "command": "EVENT_END"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "55553f17-2852-41bf-a213-f381ccb9d189",
+                            "command": "EVENT_END"
+                        }
+                    ]
                 },
                 {
                     "id": "50681431-cf40-48c1-84d4-f51f57dda712",
@@ -5035,7 +5583,92 @@
                     "y": 16,
                     "width": 3,
                     "height": 4,
-                    "trigger": "walk"
+                    "trigger": "walk",
+                    "script": [
+                        {
+                            "id": "5bfc8984-182f-4a1b-9b33-6998e01d0646",
+                            "command": "EVENT_IF_VALUE",
+                            "args": {
+                                "variable": "1",
+                                "operator": "==",
+                                "comparator": 11,
+                                "__collapseElse": true,
+                                "__label": "Hidden Alley Here",
+                                "__collapse": false
+                            },
+                            "true": [
+                                {
+                                    "id": "349a9a02-1ccc-4fba-9dc8-8f2e958ff250",
+                                    "command": "EVENT_IF_FALSE",
+                                    "args": {
+                                        "variable": "2",
+                                        "__collapseElse": true,
+                                        "__collapse": true,
+                                        "__label": "Not Visited Hidden Room"
+                                    },
+                                    "true": [
+                                        {
+                                            "id": "a838ce50-feaf-4606-94a9-26da1364b180",
+                                            "command": "EVENT_IF_TRUE",
+                                            "args": {
+                                                "variable": "16",
+                                                "__collapseElse": true,
+                                                "__label": "Carrying Delivery",
+                                                "__collapse": true
+                                            },
+                                            "true": [
+                                                {
+                                                    "id": "f5d6f779-643b-4d9b-b7ee-305f0a98ba24",
+                                                    "command": "EVENT_SWITCH_SCENE",
+                                                    "args": {
+                                                        "sceneId": "36b3249a-3dcb-4b26-a747-6ca82cdfdab7",
+                                                        "x": 9,
+                                                        "y": 9,
+                                                        "direction": "up",
+                                                        "fadeSpeed": "1"
+                                                    }
+                                                },
+                                                {
+                                                    "id": "a016d2be-9f8e-40bf-89ab-c7a047c9448e",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ],
+                                            "false": [
+                                                {
+                                                    "id": "c540bbde-cd01-4ff1-ad33-8d4f1ca826ee",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "id": "3cfbe0ee-6cc7-4522-be10-6e64632379a0",
+                                            "command": "EVENT_END"
+                                        }
+                                    ],
+                                    "false": [
+                                        {
+                                            "id": "ae6e83c0-1959-477b-bddd-4c0086ac4393",
+                                            "command": "EVENT_END"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "72b218ae-71ed-41bb-9eb8-1874672447d8",
+                                    "command": "EVENT_END"
+                                }
+                            ],
+                            "false": [
+                                {
+                                    "id": "0ea01e38-fbc6-4a5a-b21c-a0f243cb683b",
+                                    "command": "EVENT_END"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "cd303432-5d83-4e01-8584-b6c103c61954",
+                            "command": "EVENT_END"
+                        }
+                    ]
                 },
                 {
                     "id": "008058fd-0e11-4444-9478-26a65d057efe",
@@ -5346,7 +5979,92 @@
                     "y": 12,
                     "width": 2,
                     "height": 3,
-                    "trigger": "walk"
+                    "trigger": "walk",
+                    "script": [
+                        {
+                            "id": "1f958ca3-31d9-4f3b-9828-c0cc03954d2d",
+                            "command": "EVENT_IF_VALUE",
+                            "args": {
+                                "variable": "1",
+                                "operator": "==",
+                                "comparator": 10,
+                                "__collapseElse": true,
+                                "__label": "Hidden Alley Here",
+                                "__collapse": false
+                            },
+                            "true": [
+                                {
+                                    "id": "5115e6d2-dcee-49c2-862a-d4b989d17102",
+                                    "command": "EVENT_IF_FALSE",
+                                    "args": {
+                                        "variable": "2",
+                                        "__collapseElse": true,
+                                        "__collapse": true,
+                                        "__label": "Not Visited Hidden Room"
+                                    },
+                                    "true": [
+                                        {
+                                            "id": "78bc2101-0991-4fcf-a49d-c03904d94372",
+                                            "command": "EVENT_IF_TRUE",
+                                            "args": {
+                                                "variable": "16",
+                                                "__collapseElse": true,
+                                                "__label": "Carrying Delivery",
+                                                "__collapse": true
+                                            },
+                                            "true": [
+                                                {
+                                                    "id": "f826a4c9-f495-4dad-a136-3b92dfc87bec",
+                                                    "command": "EVENT_SWITCH_SCENE",
+                                                    "args": {
+                                                        "sceneId": "36b3249a-3dcb-4b26-a747-6ca82cdfdab7",
+                                                        "x": 9,
+                                                        "y": 9,
+                                                        "direction": "up",
+                                                        "fadeSpeed": "1"
+                                                    }
+                                                },
+                                                {
+                                                    "id": "e4634eea-2e63-44b0-8207-cddbad82b9ce",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ],
+                                            "false": [
+                                                {
+                                                    "id": "9461e3d3-1d51-408f-b9e0-aead26bd8f13",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "id": "68bb2858-05b6-4fa0-b481-ea3fcea3f69b",
+                                            "command": "EVENT_END"
+                                        }
+                                    ],
+                                    "false": [
+                                        {
+                                            "id": "d9ed8b07-195a-4808-882e-b043afbd2358",
+                                            "command": "EVENT_END"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "4c0da3be-e529-41dc-bba0-75d8608fd833",
+                                    "command": "EVENT_END"
+                                }
+                            ],
+                            "false": [
+                                {
+                                    "id": "a6059260-0953-4853-a104-98ea4a9ae95e",
+                                    "command": "EVENT_END"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "3572664a-828e-4ce4-a5ae-529db87f6e1b",
+                            "command": "EVENT_END"
+                        }
+                    ]
                 },
                 {
                     "id": "7787f4b6-bdfb-4566-a287-3efe926cce8c",
@@ -5682,7 +6400,92 @@
                     "y": 16,
                     "width": 3,
                     "height": 2,
-                    "trigger": "walk"
+                    "trigger": "walk",
+                    "script": [
+                        {
+                            "id": "bd509f56-6ce5-4d70-959f-f4b59b93adbe",
+                            "command": "EVENT_IF_VALUE",
+                            "args": {
+                                "variable": "1",
+                                "operator": "==",
+                                "comparator": 9,
+                                "__collapseElse": true,
+                                "__label": "Hidden Alley Here",
+                                "__collapse": false
+                            },
+                            "true": [
+                                {
+                                    "id": "54d2ce55-b271-4429-a1fd-4ead207291cf",
+                                    "command": "EVENT_IF_FALSE",
+                                    "args": {
+                                        "variable": "2",
+                                        "__collapseElse": true,
+                                        "__collapse": true,
+                                        "__label": "Not Visited Hidden Room"
+                                    },
+                                    "true": [
+                                        {
+                                            "id": "370d5347-f899-4340-81f9-f234d4f4a01a",
+                                            "command": "EVENT_IF_TRUE",
+                                            "args": {
+                                                "variable": "16",
+                                                "__collapseElse": true,
+                                                "__label": "Carrying Delivery",
+                                                "__collapse": true
+                                            },
+                                            "true": [
+                                                {
+                                                    "id": "c8413d47-9630-407c-be2f-5e2132f9b7ba",
+                                                    "command": "EVENT_SWITCH_SCENE",
+                                                    "args": {
+                                                        "sceneId": "36b3249a-3dcb-4b26-a747-6ca82cdfdab7",
+                                                        "x": 9,
+                                                        "y": 9,
+                                                        "direction": "up",
+                                                        "fadeSpeed": "1"
+                                                    }
+                                                },
+                                                {
+                                                    "id": "47e519d9-af83-47cd-b8d4-e12107446153",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ],
+                                            "false": [
+                                                {
+                                                    "id": "7d07af55-36bb-4f13-b087-d5fbc58a122c",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "id": "a63734db-c1f3-443a-8a1a-1ac07a84c44f",
+                                            "command": "EVENT_END"
+                                        }
+                                    ],
+                                    "false": [
+                                        {
+                                            "id": "bd0b6137-dda4-4078-b277-bc32d78e5b52",
+                                            "command": "EVENT_END"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "c5565fb8-9d39-4ad0-86ae-045910c55846",
+                                    "command": "EVENT_END"
+                                }
+                            ],
+                            "false": [
+                                {
+                                    "id": "dcf5b074-6b41-412d-b541-38a3f45477ef",
+                                    "command": "EVENT_END"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "f35dafe8-c8c4-4476-9a5d-b050e2308b9c",
+                            "command": "EVENT_END"
+                        }
+                    ]
                 },
                 {
                     "id": "f6d3dff6-70f5-4d3f-9b6b-f8046d8109df",
@@ -6091,7 +6894,92 @@
                     "y": 20,
                     "width": 3,
                     "height": 4,
-                    "trigger": "walk"
+                    "trigger": "walk",
+                    "script": [
+                        {
+                            "id": "cfc6329f-4ce1-40e0-bcc0-9bf6d55a6a37",
+                            "command": "EVENT_IF_VALUE",
+                            "args": {
+                                "variable": "1",
+                                "operator": "==",
+                                "comparator": 8,
+                                "__collapseElse": true,
+                                "__label": "Hidden Alley Here",
+                                "__collapse": false
+                            },
+                            "true": [
+                                {
+                                    "id": "0b3bc7a7-72a9-4ba1-a2a0-1427c0098d20",
+                                    "command": "EVENT_IF_FALSE",
+                                    "args": {
+                                        "variable": "2",
+                                        "__collapseElse": true,
+                                        "__collapse": true,
+                                        "__label": "Not Visited Hidden Room"
+                                    },
+                                    "true": [
+                                        {
+                                            "id": "b603cb98-d835-4d74-beee-07b400641de3",
+                                            "command": "EVENT_IF_TRUE",
+                                            "args": {
+                                                "variable": "16",
+                                                "__collapseElse": true,
+                                                "__label": "Carrying Delivery",
+                                                "__collapse": true
+                                            },
+                                            "true": [
+                                                {
+                                                    "id": "064923fb-3a64-428f-a836-0aaee53eec0e",
+                                                    "command": "EVENT_SWITCH_SCENE",
+                                                    "args": {
+                                                        "sceneId": "36b3249a-3dcb-4b26-a747-6ca82cdfdab7",
+                                                        "x": 9,
+                                                        "y": 9,
+                                                        "direction": "up",
+                                                        "fadeSpeed": "1"
+                                                    }
+                                                },
+                                                {
+                                                    "id": "c85556c2-4c8a-493d-9065-8d2aade662af",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ],
+                                            "false": [
+                                                {
+                                                    "id": "cde0ab22-8ffc-41ff-b563-ad42cb176bc5",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "id": "4b8b068c-d344-4520-ae06-e9f9a300cf2c",
+                                            "command": "EVENT_END"
+                                        }
+                                    ],
+                                    "false": [
+                                        {
+                                            "id": "f7582b7a-2c4b-4364-a9c2-b3437c4fb4e2",
+                                            "command": "EVENT_END"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "6ecda50e-83e0-43cd-bd08-90d913325936",
+                                    "command": "EVENT_END"
+                                }
+                            ],
+                            "false": [
+                                {
+                                    "id": "9d138c8b-7bb6-466d-b3ae-9df8d54d16e6",
+                                    "command": "EVENT_END"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "e3effeaf-292e-49a7-add5-5d8fd187e9ee",
+                            "command": "EVENT_END"
+                        }
+                    ]
                 },
                 {
                     "id": "cc758d0d-199e-429b-b25e-88c51baaf0cb",
@@ -6454,7 +7342,92 @@
                     "y": 27,
                     "width": 5,
                     "height": 2,
-                    "trigger": "walk"
+                    "trigger": "walk",
+                    "script": [
+                        {
+                            "id": "8d9c09dd-9a41-452a-bda4-34ad86d2cac7",
+                            "command": "EVENT_IF_VALUE",
+                            "args": {
+                                "variable": "1",
+                                "operator": "==",
+                                "comparator": 7,
+                                "__collapseElse": true,
+                                "__label": "Hidden Alley Here",
+                                "__collapse": false
+                            },
+                            "true": [
+                                {
+                                    "id": "f9159f48-3f89-48a7-a750-f32f29b950c2",
+                                    "command": "EVENT_IF_FALSE",
+                                    "args": {
+                                        "variable": "2",
+                                        "__collapseElse": true,
+                                        "__collapse": true,
+                                        "__label": "Not Visited Hidden Room"
+                                    },
+                                    "true": [
+                                        {
+                                            "id": "78e05584-a33c-4679-86f4-95f043ff2ce8",
+                                            "command": "EVENT_IF_TRUE",
+                                            "args": {
+                                                "variable": "16",
+                                                "__collapseElse": true,
+                                                "__label": "Carrying Delivery",
+                                                "__collapse": true
+                                            },
+                                            "true": [
+                                                {
+                                                    "id": "449a1e58-7f7b-419c-95c7-7d24fe49dc84",
+                                                    "command": "EVENT_SWITCH_SCENE",
+                                                    "args": {
+                                                        "sceneId": "36b3249a-3dcb-4b26-a747-6ca82cdfdab7",
+                                                        "x": 9,
+                                                        "y": 9,
+                                                        "direction": "up",
+                                                        "fadeSpeed": "1"
+                                                    }
+                                                },
+                                                {
+                                                    "id": "571323a1-bc48-4b56-a1cd-ffda2317213c",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ],
+                                            "false": [
+                                                {
+                                                    "id": "70ad1073-89d7-4639-b13e-c7957153462d",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "id": "903d0e81-74f1-4b9f-80eb-524b534ead1e",
+                                            "command": "EVENT_END"
+                                        }
+                                    ],
+                                    "false": [
+                                        {
+                                            "id": "aa63b700-0f98-4236-a8a9-d6f1aeaabd9a",
+                                            "command": "EVENT_END"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "bf07eefb-560a-4edb-8156-09e3042d8f98",
+                                    "command": "EVENT_END"
+                                }
+                            ],
+                            "false": [
+                                {
+                                    "id": "60d844a2-f9c2-4083-b98c-06f4af041833",
+                                    "command": "EVENT_END"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "773cbe72-f018-4a1d-a70c-aeba770cc417",
+                            "command": "EVENT_END"
+                        }
+                    ]
                 },
                 {
                     "id": "700721ea-b04b-4d3b-b192-9254ee85e59a",
@@ -14724,7 +15697,92 @@
                     "y": 3,
                     "width": 3,
                     "height": 5,
-                    "trigger": "walk"
+                    "trigger": "walk",
+                    "script": [
+                        {
+                            "id": "8b71bb29-ceb0-4c8c-808f-558e2f74d1ab",
+                            "command": "EVENT_IF_VALUE",
+                            "args": {
+                                "variable": "1",
+                                "operator": "==",
+                                "comparator": 4,
+                                "__collapseElse": true,
+                                "__label": "Hidden Alley Here",
+                                "__collapse": false
+                            },
+                            "true": [
+                                {
+                                    "id": "c0b2587a-7d60-4b0f-9431-6af19edfc3bf",
+                                    "command": "EVENT_IF_FALSE",
+                                    "args": {
+                                        "variable": "2",
+                                        "__collapseElse": true,
+                                        "__collapse": true,
+                                        "__label": "Not Visited Hidden Room"
+                                    },
+                                    "true": [
+                                        {
+                                            "id": "8e30c127-69c3-4b87-a477-6e809d0eaa29",
+                                            "command": "EVENT_IF_TRUE",
+                                            "args": {
+                                                "variable": "16",
+                                                "__collapseElse": true,
+                                                "__label": "Carrying Delivery",
+                                                "__collapse": true
+                                            },
+                                            "true": [
+                                                {
+                                                    "id": "8c99256c-b0bf-4a72-8b11-f7e7a1b8b9f2",
+                                                    "command": "EVENT_SWITCH_SCENE",
+                                                    "args": {
+                                                        "sceneId": "36b3249a-3dcb-4b26-a747-6ca82cdfdab7",
+                                                        "x": 9,
+                                                        "y": 9,
+                                                        "direction": "up",
+                                                        "fadeSpeed": "1"
+                                                    }
+                                                },
+                                                {
+                                                    "id": "bac3825a-a75a-493e-9910-df20ee925577",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ],
+                                            "false": [
+                                                {
+                                                    "id": "b5538b46-82b6-44a4-8d12-2295cc8a330b",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "id": "54d560a6-afed-4228-a4b4-58044bb609fa",
+                                            "command": "EVENT_END"
+                                        }
+                                    ],
+                                    "false": [
+                                        {
+                                            "id": "81e3bf0f-68e2-4346-b148-4529fb38cd38",
+                                            "command": "EVENT_END"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "788e5024-8bd1-4e2c-a328-a3b41dfe2d04",
+                                    "command": "EVENT_END"
+                                }
+                            ],
+                            "false": [
+                                {
+                                    "id": "b11e2774-52c1-441c-b71c-c1a0d41a945f",
+                                    "command": "EVENT_END"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "738c2be8-4eb3-4bfb-b796-e7c0a56fdde6",
+                            "command": "EVENT_END"
+                        }
+                    ]
                 },
                 {
                     "id": "0e323732-343b-435a-8429-2c1bb7f648f2",
@@ -15097,7 +16155,92 @@
                     "y": 5,
                     "width": 4,
                     "height": 2,
-                    "trigger": "walk"
+                    "trigger": "walk",
+                    "script": [
+                        {
+                            "id": "a07c8075-d8f0-434f-a5c0-e031c8664578",
+                            "command": "EVENT_IF_VALUE",
+                            "args": {
+                                "variable": "1",
+                                "operator": "==",
+                                "comparator": 16,
+                                "__collapseElse": true,
+                                "__label": "Hidden Alley Here",
+                                "__collapse": false
+                            },
+                            "true": [
+                                {
+                                    "id": "2fb8ec02-e30c-49b9-9298-b6eaee95ed9e",
+                                    "command": "EVENT_IF_FALSE",
+                                    "args": {
+                                        "variable": "2",
+                                        "__collapseElse": true,
+                                        "__collapse": true,
+                                        "__label": "Not Visited Hidden Room"
+                                    },
+                                    "true": [
+                                        {
+                                            "id": "ca091fe7-a1da-46e6-b076-638d3a3fa826",
+                                            "command": "EVENT_IF_TRUE",
+                                            "args": {
+                                                "variable": "16",
+                                                "__collapseElse": true,
+                                                "__label": "Carrying Delivery",
+                                                "__collapse": true
+                                            },
+                                            "true": [
+                                                {
+                                                    "id": "d0a53080-8377-4388-a456-538586f0c5d3",
+                                                    "command": "EVENT_SWITCH_SCENE",
+                                                    "args": {
+                                                        "sceneId": "36b3249a-3dcb-4b26-a747-6ca82cdfdab7",
+                                                        "x": 9,
+                                                        "y": 9,
+                                                        "direction": "up",
+                                                        "fadeSpeed": "1"
+                                                    }
+                                                },
+                                                {
+                                                    "id": "343cd7f4-d665-45e8-8072-c1cf1808b89a",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ],
+                                            "false": [
+                                                {
+                                                    "id": "0195ce00-0fae-447b-a57f-3311f2c2ba55",
+                                                    "command": "EVENT_END"
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "id": "25d2b4b7-a97a-414a-a5c9-dd7e0f188bdf",
+                                            "command": "EVENT_END"
+                                        }
+                                    ],
+                                    "false": [
+                                        {
+                                            "id": "0ac89651-da8b-4fc1-8813-4ace232ad6de",
+                                            "command": "EVENT_END"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "e453532c-bf99-4d8e-81a3-20fdeeb38d48",
+                                    "command": "EVENT_END"
+                                }
+                            ],
+                            "false": [
+                                {
+                                    "id": "354a2b3d-e455-4010-833d-0e27155dcffb",
+                                    "command": "EVENT_END"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "fe1bd4e4-6da7-4d16-9f91-c422221e67ff",
+                            "command": "EVENT_END"
+                        }
+                    ]
                 },
                 {
                     "id": "0697b9cb-4f1e-403a-8066-d0263b51c78e",
@@ -15360,61 +16503,6 @@
                             "command": "EVENT_END"
                         }
                     ]
-                },
-                {
-                    "id": "232f3cd2-624e-49a2-86f3-25abe1a447df",
-                    "command": "EVENT_SET_VALUE",
-                    "args": {
-                        "variable": "14",
-                        "value": 1,
-                        "__collapse": false
-                    }
-                },
-                {
-                    "id": "46ac6ef7-9845-49a1-b2b7-6be7c757db56",
-                    "command": "EVENT_SET_VALUE",
-                    "args": {
-                        "variable": "20",
-                        "value": 1,
-                        "__collapse": false
-                    }
-                },
-                {
-                    "id": "002c4fe0-d4df-4ed0-9638-58a33bc1cb33",
-                    "command": "EVENT_SET_TRUE",
-                    "args": {
-                        "variable": "15",
-                        "__collapse": false
-                    }
-                },
-                {
-                    "id": "9993106b-6e17-4c1b-b86e-8da06bcbec41",
-                    "command": "EVENT_SET_TRUE",
-                    "args": {
-                        "variable": "3"
-                    }
-                },
-                {
-                    "id": "7538bfbb-d491-443c-8df0-14c4177aab70",
-                    "command": "EVENT_SET_FALSE",
-                    "args": {
-                        "variable": "4",
-                        "__collapse": false
-                    }
-                },
-                {
-                    "id": "5e54095c-971f-4946-a277-a29968f0dba2",
-                    "command": "EVENT_SET_TRUE",
-                    "args": {
-                        "variable": "16"
-                    }
-                },
-                {
-                    "id": "b7c786b0-06a8-42ac-be75-e3417f385946",
-                    "command": "EVENT_SET_TRUE",
-                    "args": {
-                        "variable": "2"
-                    }
                 },
                 {
                     "id": "741d3d54-0d3b-456f-a0f8-112f9a360601",
