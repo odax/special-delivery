@@ -1555,7 +1555,8 @@
                                             "id": "8d35e7e2-3b3b-4448-8df2-b0063d5d461d",
                                             "command": "EVENT_CAMERA_SHAKE",
                                             "args": {
-                                                "time": 0.5
+                                                "time": 0.5,
+                                                "__collapse": true
                                             }
                                         },
                                         {
@@ -7813,6 +7814,23 @@
                                                             }
                                                         },
                                                         {
+                                                            "id": "df9daf69-2e87-421e-bedf-49695346ec59",
+                                                            "command": "EVENT_SET_FALSE",
+                                                            "args": {
+                                                                "variable": "2",
+                                                                "__collapse": false
+                                                            }
+                                                        },
+                                                        {
+                                                            "id": "42d62f50-d61c-404e-b628-b466086fd37f",
+                                                            "command": "EVENT_SET_VALUE",
+                                                            "args": {
+                                                                "variable": "25",
+                                                                "value": "0",
+                                                                "__collapse": false
+                                                            }
+                                                        },
+                                                        {
                                                             "id": "ef41327d-725c-4e3e-a61a-814579221518",
                                                             "command": "EVENT_IF_TRUE",
                                                             "args": {
@@ -8236,6 +8254,15 @@
                                                             "command": "EVENT_SET_FALSE",
                                                             "args": {
                                                                 "variable": "2"
+                                                            }
+                                                        },
+                                                        {
+                                                            "id": "82739d0e-582f-4f54-a187-698383ae373a",
+                                                            "command": "EVENT_SET_VALUE",
+                                                            "args": {
+                                                                "variable": "25",
+                                                                "value": "0",
+                                                                "__collapse": false
                                                             }
                                                         },
                                                         {
@@ -9191,6 +9218,23 @@
                                                             }
                                                         },
                                                         {
+                                                            "id": "53db1629-2158-476e-9705-3353bfa37ed4",
+                                                            "command": "EVENT_SET_FALSE",
+                                                            "args": {
+                                                                "variable": "2",
+                                                                "__collapse": false
+                                                            }
+                                                        },
+                                                        {
+                                                            "id": "c94ccb6b-36a2-494d-8eed-15b6cc196a4e",
+                                                            "command": "EVENT_SET_VALUE",
+                                                            "args": {
+                                                                "variable": "25",
+                                                                "value": "0",
+                                                                "__collapse": false
+                                                            }
+                                                        },
+                                                        {
                                                             "id": "871f52f3-33a0-4f3d-9926-8c2d03e04f0b",
                                                             "command": "EVENT_IF_TRUE",
                                                             "args": {
@@ -9411,6 +9455,15 @@
                                                             "command": "EVENT_SET_FALSE",
                                                             "args": {
                                                                 "variable": "2"
+                                                            }
+                                                        },
+                                                        {
+                                                            "id": "e3d324b2-11a3-4c11-a342-44633ed08c21",
+                                                            "command": "EVENT_SET_VALUE",
+                                                            "args": {
+                                                                "variable": "25",
+                                                                "value": "0",
+                                                                "__collapse": false
                                                             }
                                                         },
                                                         {
@@ -10360,6 +10413,23 @@
                                                             }
                                                         },
                                                         {
+                                                            "id": "c6932c96-4aaf-4004-a1a7-3366ed66d75e",
+                                                            "command": "EVENT_SET_FALSE",
+                                                            "args": {
+                                                                "variable": "2",
+                                                                "__collapse": false
+                                                            }
+                                                        },
+                                                        {
+                                                            "id": "c0074d4f-5063-4248-973f-eb17d6592056",
+                                                            "command": "EVENT_SET_VALUE",
+                                                            "args": {
+                                                                "variable": "25",
+                                                                "value": "0",
+                                                                "__collapse": false
+                                                            }
+                                                        },
+                                                        {
                                                             "id": "07fb1808-8f6f-4333-bc76-84bf392a73b2",
                                                             "command": "EVENT_IF_TRUE",
                                                             "args": {
@@ -10580,6 +10650,15 @@
                                                             "command": "EVENT_SET_FALSE",
                                                             "args": {
                                                                 "variable": "2"
+                                                            }
+                                                        },
+                                                        {
+                                                            "id": "4f2b10e5-d3a6-40d2-9c8f-21f0025546bf",
+                                                            "command": "EVENT_SET_VALUE",
+                                                            "args": {
+                                                                "variable": "25",
+                                                                "value": "0",
+                                                                "__collapse": false
                                                             }
                                                         },
                                                         {
@@ -11509,6 +11588,23 @@
                                                             }
                                                         },
                                                         {
+                                                            "id": "7b0e45c6-2cbe-4480-96c2-4d7c3ab64a08",
+                                                            "command": "EVENT_SET_FALSE",
+                                                            "args": {
+                                                                "variable": "2",
+                                                                "__collapse": false
+                                                            }
+                                                        },
+                                                        {
+                                                            "id": "94e2456e-1752-45fa-acf8-3efb44b23b20",
+                                                            "command": "EVENT_SET_VALUE",
+                                                            "args": {
+                                                                "variable": "25",
+                                                                "value": "0",
+                                                                "__collapse": false
+                                                            }
+                                                        },
+                                                        {
                                                             "id": "6af4efc5-e5bc-4ddf-b590-385e7ede7285",
                                                             "command": "EVENT_IF_TRUE",
                                                             "args": {
@@ -11729,6 +11825,15 @@
                                                             "command": "EVENT_SET_FALSE",
                                                             "args": {
                                                                 "variable": "2"
+                                                            }
+                                                        },
+                                                        {
+                                                            "id": "95de7b80-845b-49ce-ad20-8eff2c9d282e",
+                                                            "command": "EVENT_SET_VALUE",
+                                                            "args": {
+                                                                "variable": "25",
+                                                                "value": "0",
+                                                                "__collapse": false
                                                             }
                                                         },
                                                         {
