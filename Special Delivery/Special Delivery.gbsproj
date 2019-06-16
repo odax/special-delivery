@@ -129,7 +129,7 @@
             "imageWidth": 256,
             "imageHeight": 256,
             "filename": "A1.png",
-            "_v": 1560628817117
+            "_v": 1560709463280
         },
         {
             "id": "9aeaa077-9d1d-41cd-be11-9d9b35a6fd3a",
@@ -139,27 +139,7 @@
             "imageWidth": 256,
             "imageHeight": 256,
             "filename": "A2.png",
-            "_v": 1560628817117
-        },
-        {
-            "id": "bcc03662-ea5c-46fa-9f82-d9b147477f21",
-            "name": "B1",
-            "width": 32,
-            "height": 32,
-            "imageWidth": 256,
-            "imageHeight": 256,
-            "filename": "B1.png",
-            "_v": 1560628817117
-        },
-        {
-            "id": "d1206255-968a-4e62-bffa-1ca46785a635",
-            "name": "B2",
-            "width": 32,
-            "height": 32,
-            "imageWidth": 256,
-            "imageHeight": 256,
-            "filename": "B2.png",
-            "_v": 1560628817117
+            "_v": 1560709463280
         },
         {
             "id": "9c1fc5dd-d28b-484a-b6f3-d16129aa6745",
@@ -169,7 +149,7 @@
             "imageWidth": 256,
             "imageHeight": 256,
             "filename": "a3.png",
-            "_v": 1560628817117
+            "_v": 1560709463280
         },
         {
             "id": "651e4541-4272-47df-b8ba-dc9a747d5b5d",
@@ -179,7 +159,7 @@
             "imageWidth": 256,
             "imageHeight": 256,
             "filename": "a4.png",
-            "_v": 1560628817117
+            "_v": 1560709463281
         },
         {
             "id": "6c319118-83ac-4a19-ba34-a4cd9714dbf2",
@@ -189,7 +169,127 @@
             "imageWidth": 256,
             "imageHeight": 256,
             "filename": "a5.png",
-            "_v": 1560629794623
+            "_v": 1560709463281
+        },
+        {
+            "id": "bcc03662-ea5c-46fa-9f82-d9b147477f21",
+            "name": "B1",
+            "width": 32,
+            "height": 32,
+            "imageWidth": 256,
+            "imageHeight": 256,
+            "filename": "B1.png",
+            "_v": 1560709463281
+        },
+        {
+            "id": "d1206255-968a-4e62-bffa-1ca46785a635",
+            "name": "B2",
+            "width": 32,
+            "height": 32,
+            "imageWidth": 256,
+            "imageHeight": 256,
+            "filename": "B2.png",
+            "_v": 1560709463281
+        },
+        {
+            "id": "aeaae1fb-5edf-4f25-bfb2-ecc338253c5e",
+            "name": "b3",
+            "width": 32,
+            "height": 32,
+            "imageWidth": 256,
+            "imageHeight": 256,
+            "filename": "b3.png",
+            "_v": 1560709463281
+        },
+        {
+            "id": "050e4749-9e43-4837-a612-4944c355371e",
+            "name": "b4",
+            "width": 32,
+            "height": 32,
+            "imageWidth": 256,
+            "imageHeight": 256,
+            "filename": "b4.png",
+            "_v": 1560709463281
+        },
+        {
+            "id": "f59a9ea1-346b-445d-a1bc-b1d21a719d37",
+            "name": "c1",
+            "width": 32,
+            "height": 32,
+            "imageWidth": 256,
+            "imageHeight": 256,
+            "filename": "c1.png",
+            "_v": 1560709463281
+        },
+        {
+            "id": "31e46067-f407-4943-8a7d-ca01e4d354c6",
+            "name": "c2",
+            "width": 32,
+            "height": 32,
+            "imageWidth": 256,
+            "imageHeight": 256,
+            "filename": "c2.png",
+            "_v": 1560709463281
+        },
+        {
+            "id": "efc4c86d-e278-48d4-a535-0659c429c155",
+            "name": "c3",
+            "width": 32,
+            "height": 32,
+            "imageWidth": 256,
+            "imageHeight": 256,
+            "filename": "c3.png",
+            "_v": 1560709463281
+        },
+        {
+            "id": "ea8ae84b-aa58-4d9e-9db4-0234459069ae",
+            "name": "c4",
+            "width": 32,
+            "height": 32,
+            "imageWidth": 256,
+            "imageHeight": 256,
+            "filename": "c4.png",
+            "_v": 1560709463281
+        },
+        {
+            "id": "b1d002c4-1bdf-4bf1-8fc4-6f0f77f7bb5f",
+            "name": "d1",
+            "width": 32,
+            "height": 32,
+            "imageWidth": 256,
+            "imageHeight": 256,
+            "filename": "d1.png",
+            "_v": 1560709463281
+        },
+        {
+            "id": "ca79df50-58b3-4b77-92f4-e72c3f0fbdd6",
+            "name": "d2",
+            "width": 32,
+            "height": 32,
+            "imageWidth": 256,
+            "imageHeight": 256,
+            "filename": "d2.png",
+            "_v": 1560709463281
+        },
+        {
+            "id": "2d79b332-af62-460a-9a8a-29fe16220985",
+            "name": "d3",
+            "width": 32,
+            "height": 32,
+            "imageWidth": 256,
+            "imageHeight": 256,
+            "filename": "d3.png",
+            "_v": 1560709463281
+        },
+        {
+            "id": "fddf1be4-f3db-44da-b573-29c8b9cc51fd",
+            "name": "d4",
+            "width": 32,
+            "height": 32,
+            "imageWidth": 256,
+            "imageHeight": 256,
+            "filename": "d4.png",
+            "_v": 1560709463281
         },
         {
             "id": "fd85fa74-aedb-4570-9ca2-bb6537439abc",
@@ -199,7 +299,7 @@
             "imageWidth": 256,
             "imageHeight": 256,
             "filename": "house1.png",
-            "_v": 1560628817117
+            "_v": 1560709463281
         },
         {
             "id": "a7cb791e-326e-47e2-a1de-1ec79228ec90",
@@ -209,7 +309,7 @@
             "imageWidth": 256,
             "imageHeight": 256,
             "filename": "house2.png",
-            "_v": 1560628817117
+            "_v": 1560709463281
         },
         {
             "id": "0494a133-98da-4356-aa78-b916f94a324f",
@@ -219,7 +319,7 @@
             "imageWidth": 256,
             "imageHeight": 256,
             "filename": "house3.png",
-            "_v": 1560628817117
+            "_v": 1560709463281
         },
         {
             "id": "1054ac00-f59f-4542-9496-346a5d055538",
@@ -229,7 +329,7 @@
             "imageWidth": 256,
             "imageHeight": 256,
             "filename": "house4.png",
-            "_v": 1560628817117
+            "_v": 1560709463281
         },
         {
             "id": "5978b4ee-4161-4394-af3d-78b1b1f51514",
@@ -239,7 +339,7 @@
             "imageWidth": 160,
             "imageHeight": 144,
             "filename": "menu.png",
-            "_v": 1560632102748
+            "_v": 1560709463281
         },
         {
             "id": "1e5f9d6a-bdbc-43e6-8c34-22f5bb5dea05",
@@ -249,7 +349,7 @@
             "imageWidth": 160,
             "imageHeight": 144,
             "filename": "placeholder.png",
-            "_v": 1560628817117
+            "_v": 1560709463281
         },
         {
             "id": "66c92d2b-c02d-4501-8b2f-80f3bf348df8",
@@ -259,7 +359,7 @@
             "imageWidth": 256,
             "imageHeight": 256,
             "filename": "restaurant.png",
-            "_v": 1560628817117
+            "_v": 1560709463281
         },
         {
             "id": "efd54c60-d234-4307-8bcc-ada1ffc6dce6",
@@ -269,7 +369,7 @@
             "imageWidth": 256,
             "imageHeight": 256,
             "filename": "title.png",
-            "_v": 1560628817117
+            "_v": 1560709463281
         }
     ],
     "spriteSheets": [
@@ -279,7 +379,7 @@
             "numFrames": 1,
             "type": "static",
             "filename": "1.png",
-            "_v": 1560628817123
+            "_v": 1560709463285
         },
         {
             "id": "e87b0db0-7ec7-49d8-a6ad-30779a7d47f3",
@@ -287,7 +387,7 @@
             "numFrames": 1,
             "type": "static",
             "filename": "2.png",
-            "_v": 1560628817123
+            "_v": 1560709463285
         },
         {
             "id": "b0beb68e-055a-4841-af0d-cfa4281ad979",
@@ -295,7 +395,7 @@
             "numFrames": 1,
             "type": "static",
             "filename": "3.png",
-            "_v": 1560628817123
+            "_v": 1560709463285
         },
         {
             "id": "97747d30-f5a4-4547-ae27-9356eb248db7",
@@ -303,7 +403,7 @@
             "numFrames": 1,
             "type": "static",
             "filename": "4.png",
-            "_v": 1560628817123
+            "_v": 1560709463285
         },
         {
             "id": "581d34d0-9591-4e6e-a609-1d94f203b0cd",
@@ -311,7 +411,7 @@
             "numFrames": 6,
             "type": "actor_animated",
             "filename": "actor_animated.png",
-            "_v": 1560628817123
+            "_v": 1560709463285
         },
         {
             "id": "11b5452b-187c-43a3-afb1-a1f4f74ffda2",
@@ -319,7 +419,7 @@
             "numFrames": 3,
             "type": "actor",
             "filename": "actor.png",
-            "_v": 1560628817123
+            "_v": 1560709463285
         },
         {
             "id": "158caf80-ace3-4cc6-ab1a-7c3e3a4ea16b",
@@ -327,7 +427,7 @@
             "numFrames": 1,
             "type": "static",
             "filename": "blank.png",
-            "_v": 1560628817123
+            "_v": 1560709463285
         },
         {
             "id": "92107946-17c9-4a3c-a027-7680a7e3ec84",
@@ -335,7 +435,7 @@
             "numFrames": 3,
             "type": "actor",
             "filename": "boulder.png",
-            "_v": 1560628817123
+            "_v": 1560709463285
         },
         {
             "id": "87d7a1a9-ef4e-4ca8-aef7-1901b8a4f1fd",
@@ -343,7 +443,7 @@
             "numFrames": 1,
             "type": "static",
             "filename": "boy_static.png",
-            "_v": 1560628817123
+            "_v": 1560709463285
         },
         {
             "id": "4821af08-eeb4-42d2-96fb-82cc73e3544a",
@@ -351,7 +451,7 @@
             "numFrames": 3,
             "type": "actor",
             "filename": "boy.png",
-            "_v": 1560628817123
+            "_v": 1560709463286
         },
         {
             "id": "afaa5cd9-ba1f-4f4e-9130-0e22702d9530",
@@ -359,7 +459,7 @@
             "numFrames": 3,
             "type": "actor",
             "filename": "car.png",
-            "_v": 1560628817123
+            "_v": 1560709463286
         },
         {
             "id": "ea067938-b683-4bba-8613-83fe8d8dcbca",
@@ -367,7 +467,7 @@
             "numFrames": 1,
             "type": "static",
             "filename": "cat.png",
-            "_v": 1560628817123
+            "_v": 1560709463286
         },
         {
             "id": "1d65bc0d-dc92-48bb-b2fd-f6780049ab6a",
@@ -375,7 +475,7 @@
             "numFrames": 3,
             "type": "actor",
             "filename": "cube.png",
-            "_v": 1560628817123
+            "_v": 1560709463286
         },
         {
             "id": "7c524ecc-4d3b-4384-a69a-1587fe22eda6",
@@ -383,7 +483,7 @@
             "numFrames": 1,
             "type": "static",
             "filename": "dog.png",
-            "_v": 1560628817123
+            "_v": 1560709463286
         },
         {
             "id": "472889f2-ee07-4ca3-bf66-4607b6128d67",
@@ -391,7 +491,7 @@
             "numFrames": 3,
             "type": "actor",
             "filename": "gem.png",
-            "_v": 1560628817123
+            "_v": 1560709463286
         },
         {
             "id": "ecd9fb53-cde0-461c-8222-94af8b6b0c1d",
@@ -399,7 +499,7 @@
             "numFrames": 3,
             "type": "actor",
             "filename": "lady.png",
-            "_v": 1560628817123
+            "_v": 1560709463286
         },
         {
             "id": "0ee0cb19-f812-452d-97cb-20dd8ece888e",
@@ -407,7 +507,7 @@
             "numFrames": 6,
             "type": "actor_animated",
             "filename": "link_shadow.png",
-            "_v": 1560628817123
+            "_v": 1560709463286
         },
         {
             "id": "3cb5aafd-38f1-4a96-a446-43b9dac83721",
@@ -415,7 +515,7 @@
             "numFrames": 3,
             "type": "actor",
             "filename": "npc001.png",
-            "_v": 1560628817123
+            "_v": 1560709463286
         },
         {
             "id": "f91d623e-1a36-47fa-a167-d06fd0f19682",
@@ -423,7 +523,7 @@
             "numFrames": 3,
             "type": "actor",
             "filename": "npc002.png",
-            "_v": 1560628817123
+            "_v": 1560709463286
         },
         {
             "id": "e600b917-ee0e-4acb-84c1-516eb4e3084a",
@@ -431,7 +531,7 @@
             "numFrames": 1,
             "type": "static",
             "filename": "player_static.png",
-            "_v": 1560628817123
+            "_v": 1560709463286
         },
         {
             "id": "fd070b07-b408-4fb3-8f37-d6fb7fcdbc2b",
@@ -439,7 +539,7 @@
             "numFrames": 6,
             "type": "actor_animated",
             "filename": "player_young.png",
-            "_v": 1560628817123
+            "_v": 1560709463286
         },
         {
             "id": "4909e8b7-9ecd-4d12-a61e-100329e5fe40",
@@ -447,7 +547,7 @@
             "numFrames": 6,
             "type": "actor_animated",
             "filename": "player.png",
-            "_v": 1560628817123
+            "_v": 1560709463286
         },
         {
             "id": "daf95270-e30d-423b-9ee7-990ae29f57f6",
@@ -455,7 +555,7 @@
             "numFrames": 1,
             "type": "static",
             "filename": "static.png",
-            "_v": 1560628817123
+            "_v": 1560709463286
         },
         {
             "id": "1c15956e-9a92-4f04-8063-830988dda1cb",
@@ -463,7 +563,7 @@
             "numFrames": 1,
             "type": "static",
             "filename": "statue_lower.png",
-            "_v": 1560628817123
+            "_v": 1560709463286
         },
         {
             "id": "003f4d39-63c0-406f-ae3e-9b3de9114ddb",
@@ -471,7 +571,7 @@
             "numFrames": 1,
             "type": "static",
             "filename": "statue_upper.png",
-            "_v": 1560628817123
+            "_v": 1560709463286
         }
     ],
     "scenes": [
@@ -2373,14 +2473,143 @@
         {
             "id": "629f5029-073a-4e54-b742-7c6dc6a25de0",
             "name": "D2",
-            "backgroundId": "1e5f9d6a-bdbc-43e6-8c34-22f5bb5dea05",
+            "backgroundId": "ca79df50-58b3-4b77-92f4-e72c3f0fbdd6",
             "x": 2339.75,
             "y": 1197.5,
-            "width": 20,
-            "height": 18,
+            "width": 32,
+            "height": 32,
             "actors": [],
             "triggers": [],
-            "collisions": []
+            "collisions": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ]
         },
         {
             "id": "741e8e61-abcf-420a-90d2-44b36ab470a6",
@@ -2455,14 +2684,143 @@
         {
             "id": "83747c13-c41c-4bf7-a313-43aae52fc03d",
             "name": "C3",
-            "backgroundId": "1e5f9d6a-bdbc-43e6-8c34-22f5bb5dea05",
+            "backgroundId": "efc4c86d-e278-48d4-a535-0659c429c155",
             "x": 2023.25,
             "y": 1222.25,
-            "width": 20,
-            "height": 18,
+            "width": 32,
+            "height": 32,
             "actors": [],
             "triggers": [],
-            "collisions": []
+            "collisions": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ]
         },
         {
             "id": "2cc93fbb-86b9-415d-a542-af8da8a44d89",
@@ -8334,7 +8692,7 @@
             "id": "f50428ab-a084-4591-9bba-2ba10fe7b1c6",
             "name": "template",
             "filename": "template.mod",
-            "_v": 1560628817125
+            "_v": 1560709463287
         }
     ]
 }
