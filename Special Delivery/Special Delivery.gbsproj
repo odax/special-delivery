@@ -5,7 +5,7 @@
         "startX": 0,
         "startY": 0,
         "startDirection": "down",
-        "zoom": 50,
+        "zoom": 200,
         "startSceneId": "89702107-1594-424f-8c5b-a8afc7d3eb4c",
         "playerSpriteSheetId": "4909e8b7-9ecd-4d12-a61e-100329e5fe40",
         "startMoveSpeed": "3",
@@ -668,8 +668,8 @@
                             "command": "EVENT_IF_FALSE",
                             "args": {
                                 "variable": "27",
-                                "__collapseElse": true,
-                                "__collapse": true,
+                                "__collapseElse": false,
+                                "__collapse": false,
                                 "__label": ""
                             },
                             "true": [
@@ -768,7 +768,7 @@
                                 "variable": "1",
                                 "operator": "==",
                                 "comparator": 1,
-                                "__collapseElse": true,
+                                "__collapseElse": false,
                                 "__label": "Hidden Alley Here",
                                 "__collapse": false
                             },
@@ -857,7 +857,7 @@
                                                     "command": "EVENT_TEXT",
                                                     "args": {
                                                         "text": "Come back with a\ndelivery package",
-                                                        "__collapse": true
+                                                        "__collapse": false
                                                     }
                                                 },
                                                 {
@@ -873,7 +873,7 @@
                                                         "variable": "2",
                                                         "__collapseElse": true,
                                                         "__label": "Not Visited Hidden Room",
-                                                        "__collapse": true
+                                                        "__collapse": false
                                                     },
                                                     "true": [
                                                         {
@@ -1105,7 +1105,7 @@
                             "command": "EVENT_IF_FALSE",
                             "args": {
                                 "variable": "26",
-                                "__collapse": true,
+                                "__collapse": false,
                                 "__collapseElse": false
                             },
                             "true": [
@@ -1183,7 +1183,7 @@
                         "variable": "1",
                         "operator": "==",
                         "comparator": 1,
-                        "__collapseElse": true,
+                        "__collapseElse": false,
                         "__label": "Hidden Alley Here",
                         "__collapse": false
                     },
@@ -1193,7 +1193,7 @@
                             "command": "EVENT_IF_FALSE",
                             "args": {
                                 "variable": "26",
-                                "__collapseElse": true,
+                                "__collapseElse": false,
                                 "__label": "Reveal Hidden Spot",
                                 "__collapse": false
                             },
@@ -1203,7 +1203,7 @@
                                     "command": "EVENT_IF_FALSE",
                                     "args": {
                                         "variable": "22",
-                                        "__collapseElse": true,
+                                        "__collapseElse": false,
                                         "__collapse": false
                                     },
                                     "true": [
@@ -2312,8 +2312,8 @@
                             "command": "EVENT_IF_TRUE",
                             "args": {
                                 "variable": "3",
-                                "__collapse": true,
-                                "__collapseElse": true
+                                "__collapse": false,
+                                "__collapseElse": false
                             },
                             "true": [
                                 {
@@ -2321,6 +2321,17 @@
                                     "command": "EVENT_PLAYER_SET_SPRITE",
                                     "args": {
                                         "spriteSheetId": "4909e8b7-9ecd-4d12-a61e-100329e5fe40"
+                                    }
+                                },
+                                {
+                                    "id": "b6f08d09-c494-44d8-b151-ceda1377c5bb",
+                                    "command": "EVENT_SWITCH_SCENE",
+                                    "args": {
+                                        "sceneId": "5193efec-b8d5-45ee-8028-9a9d0a299dfc",
+                                        "x": 18,
+                                        "y": 22,
+                                        "direction": "up",
+                                        "fadeSpeed": "1"
                                     }
                                 },
                                 {
@@ -2337,21 +2348,21 @@
                                     }
                                 },
                                 {
+                                    "id": "ee2b970d-8270-4407-b381-683aae3c694d",
+                                    "command": "EVENT_SWITCH_SCENE",
+                                    "args": {
+                                        "sceneId": "5193efec-b8d5-45ee-8028-9a9d0a299dfc",
+                                        "x": 18,
+                                        "y": 22,
+                                        "direction": "up",
+                                        "fadeSpeed": "1"
+                                    }
+                                },
+                                {
                                     "id": "96aa048d-280d-42a0-b225-e2af12b11e28",
                                     "command": "EVENT_END"
                                 }
                             ]
-                        },
-                        {
-                            "id": "b6f08d09-c494-44d8-b151-ceda1377c5bb",
-                            "command": "EVENT_SWITCH_SCENE",
-                            "args": {
-                                "sceneId": "5193efec-b8d5-45ee-8028-9a9d0a299dfc",
-                                "x": 18,
-                                "y": 22,
-                                "direction": "up",
-                                "fadeSpeed": "1"
-                            }
                         },
                         {
                             "id": "b1da3b44-3350-4e00-bd62-d59c60d9580e",
@@ -2529,9 +2540,9 @@
                     "command": "EVENT_IF_TRUE",
                     "args": {
                         "variable": "21",
-                        "__collapseElse": true,
+                        "__collapseElse": false,
                         "__label": "Game Hint",
-                        "__collapse": true
+                        "__collapse": false
                     },
                     "true": [
                         {
@@ -2966,8 +2977,8 @@
                     "command": "EVENT_IF_TRUE",
                     "args": {
                         "variable": "21",
-                        "__collapseElse": true,
-                        "__collapse": true,
+                        "__collapseElse": false,
+                        "__collapse": false,
                         "__label": "Game Hint"
                     },
                     "true": [
@@ -2997,9 +3008,9 @@
                         "variable": "1",
                         "operator": "==",
                         "comparator": 5,
-                        "__collapseElse": true,
+                        "__collapseElse": false,
                         "__label": "Hidden Alley Here",
-                        "__collapse": true
+                        "__collapse": false
                     },
                     "true": [
                         {
@@ -3007,9 +3018,9 @@
                             "command": "EVENT_IF_FALSE",
                             "args": {
                                 "variable": "26",
-                                "__collapseElse": true,
+                                "__collapseElse": false,
                                 "__label": "Reveal Hidden Spot",
-                                "__collapse": true
+                                "__collapse": false
                             },
                             "true": [
                                 {
@@ -3017,8 +3028,8 @@
                                     "command": "EVENT_IF_FALSE",
                                     "args": {
                                         "variable": "22",
-                                        "__collapseElse": true,
-                                        "__collapse": true
+                                        "__collapseElse": false,
+                                        "__collapse": false
                                     },
                                     "true": [
                                         {
@@ -3033,7 +3044,7 @@
                                             "command": "EVENT_SET_TRUE",
                                             "args": {
                                                 "variable": "26",
-                                                "__collapse": true
+                                                "__collapse": false
                                             }
                                         },
                                         {
@@ -7808,7 +7819,7 @@
                         "variable": "11",
                         "__label": "From New Game",
                         "__collapse": false,
-                        "__collapseElse": true
+                        "__collapseElse": false
                     },
                     "true": [
                         {
@@ -7896,6 +7907,27 @@
                             }
                         },
                         {
+                            "id": "dc9903cf-4c16-472a-a16e-03f9ec2e0ade",
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": "Maybe you will\nhave enough money\nsome day..."
+                            }
+                        },
+                        {
+                            "id": "bff856b0-1571-4ea2-bf3a-df42ed60e34f",
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": "to get behind the\ncafe's locked\ndoor."
+                            }
+                        },
+                        {
+                            "id": "d2e0199b-bf46-4528-846a-171a88493927",
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": "Yes, the one right\nbehind the chef."
+                            }
+                        },
+                        {
                             "id": "786db8c7-f7a2-4d2e-93a5-d0c84f3a4106",
                             "command": "EVENT_TEXT",
                             "args": {
@@ -7947,7 +7979,21 @@
                                     "id": "ca51698c-51d7-46bd-8ca0-f26ff3e6790f",
                                     "command": "EVENT_TEXT",
                                     "args": {
-                                        "text": "Press B to stop.\nPress A to dismiss\nthis."
+                                        "text": "Press B to stop\neating at any\npoint"
+                                    }
+                                },
+                                {
+                                    "id": "f56f5057-18ab-4ecd-9f6a-31067af1b66e",
+                                    "command": "EVENT_TEXT",
+                                    "args": {
+                                        "text": "Remember: Don't\neat too much"
+                                    }
+                                },
+                                {
+                                    "id": "b8a7b3da-7f8c-402e-bce9-110d2fa9ab70",
+                                    "command": "EVENT_TEXT",
+                                    "args": {
+                                        "text": "Eating begins now"
                                     }
                                 },
                                 {
@@ -7956,7 +8002,7 @@
                                     "args": {
                                         "input": "b",
                                         "__label": "Stop Eating",
-                                        "__collapse": true
+                                        "__collapse": false
                                     },
                                     "true": [
                                         {
@@ -9270,6 +9316,15 @@
                                                             }
                                                         },
                                                         {
+                                                            "id": "1391f38d-f929-4474-bb99-9750cc6cc1be",
+                                                            "command": "EVENT_SET_FALSE",
+                                                            "args": {
+                                                                "variable": "27",
+                                                                "__label": "Scene Not Stacked",
+                                                                "__collapse": true
+                                                            }
+                                                        },
+                                                        {
                                                             "id": "ef41327d-725c-4e3e-a61a-814579221518",
                                                             "command": "EVENT_IF_TRUE",
                                                             "args": {
@@ -9808,6 +9863,15 @@
                                                                 "variable": "25",
                                                                 "value": "0",
                                                                 "__collapse": false
+                                                            }
+                                                        },
+                                                        {
+                                                            "id": "ea6528c6-0141-42e8-8665-065836793b43",
+                                                            "command": "EVENT_SET_FALSE",
+                                                            "args": {
+                                                                "variable": "27",
+                                                                "__label": "Scene Not Stacked",
+                                                                "__collapse": true
                                                             }
                                                         },
                                                         {
@@ -10886,6 +10950,15 @@
                                                             }
                                                         },
                                                         {
+                                                            "id": "947aa70b-97c3-446f-97b5-c3d95a66cc58",
+                                                            "command": "EVENT_SET_FALSE",
+                                                            "args": {
+                                                                "variable": "27",
+                                                                "__label": "Scene Not Stacked",
+                                                                "__collapse": true
+                                                            }
+                                                        },
+                                                        {
                                                             "id": "871f52f3-33a0-4f3d-9926-8c2d03e04f0b",
                                                             "command": "EVENT_IF_TRUE",
                                                             "args": {
@@ -11221,6 +11294,15 @@
                                                                 "variable": "25",
                                                                 "value": "0",
                                                                 "__collapse": false
+                                                            }
+                                                        },
+                                                        {
+                                                            "id": "18339fba-0635-41e0-b685-43c10a6e342e",
+                                                            "command": "EVENT_SET_FALSE",
+                                                            "args": {
+                                                                "variable": "27",
+                                                                "__label": "Scene Not Stacked",
+                                                                "__collapse": true
                                                             }
                                                         },
                                                         {
@@ -12293,6 +12375,15 @@
                                                             }
                                                         },
                                                         {
+                                                            "id": "09dc87c7-5df7-4e81-85b4-c267f34bb98d",
+                                                            "command": "EVENT_SET_FALSE",
+                                                            "args": {
+                                                                "variable": "27",
+                                                                "__label": "Scene Not Stacked",
+                                                                "__collapse": true
+                                                            }
+                                                        },
+                                                        {
                                                             "id": "07fb1808-8f6f-4333-bc76-84bf392a73b2",
                                                             "command": "EVENT_IF_TRUE",
                                                             "args": {
@@ -12628,6 +12719,15 @@
                                                                 "variable": "25",
                                                                 "value": "0",
                                                                 "__collapse": false
+                                                            }
+                                                        },
+                                                        {
+                                                            "id": "f02b59bb-a0f5-460b-9943-9008efdcb563",
+                                                            "command": "EVENT_SET_FALSE",
+                                                            "args": {
+                                                                "variable": "27",
+                                                                "__label": "Scene Not Stacked",
+                                                                "__collapse": true
                                                             }
                                                         },
                                                         {
@@ -13680,6 +13780,15 @@
                                                             }
                                                         },
                                                         {
+                                                            "id": "8400ea13-ffb6-4982-80a9-070fad429cef",
+                                                            "command": "EVENT_SET_FALSE",
+                                                            "args": {
+                                                                "variable": "27",
+                                                                "__label": "Scene Not Stacked",
+                                                                "__collapse": true
+                                                            }
+                                                        },
+                                                        {
                                                             "id": "6af4efc5-e5bc-4ddf-b590-385e7ede7285",
                                                             "command": "EVENT_IF_TRUE",
                                                             "args": {
@@ -14015,6 +14124,15 @@
                                                                 "variable": "25",
                                                                 "value": "0",
                                                                 "__collapse": false
+                                                            }
+                                                        },
+                                                        {
+                                                            "id": "50fa3e89-c90e-4077-8de4-3f1fc7584913",
+                                                            "command": "EVENT_SET_FALSE",
+                                                            "args": {
+                                                                "variable": "27",
+                                                                "__label": "Scene Not Stacked",
+                                                                "__collapse": true
                                                             }
                                                         },
                                                         {
