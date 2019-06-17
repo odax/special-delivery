@@ -5,7 +5,7 @@
         "startX": 0,
         "startY": 0,
         "startDirection": "down",
-        "zoom": 100,
+        "zoom": 50,
         "startSceneId": "89702107-1594-424f-8c5b-a8afc7d3eb4c",
         "playerSpriteSheetId": "4909e8b7-9ecd-4d12-a61e-100329e5fe40",
         "startMoveSpeed": "2",
@@ -177,11 +177,11 @@
             "id": "19e993dd-f6ea-4e45-bd6b-c3cfcb52539d",
             "name": "COVER",
             "width": 32,
-            "height": 32,
-            "imageWidth": 256,
-            "imageHeight": 256,
+            "height": 31,
+            "imageWidth": 315,
+            "imageHeight": 250,
             "filename": "COVER.png",
-            "_v": 1560737988053
+            "_v": 1560742141449
         },
         {
             "id": "9c1fc5dd-d28b-484a-b6f3-d16129aa6745",
@@ -1328,7 +1328,7 @@
                             "args": {
                                 "variable": "27",
                                 "__collapseElse": true,
-                                "__collapse": true,
+                                "__collapse": false,
                                 "__label": ""
                             },
                             "true": [
@@ -8754,6 +8754,59 @@
                             }
                         },
                         {
+                            "id": "010bc49a-6046-416c-9c49-36a84754d317",
+                            "command": "EVENT_IF_TRUE",
+                            "args": {
+                                "variable": "15",
+                                "__collapse": true
+                            },
+                            "true": [
+                                {
+                                    "id": "7987fc36-b391-48e2-8fa2-bfe67f404c91",
+                                    "command": "EVENT_IF_TRUE",
+                                    "args": {
+                                        "variable": "3"
+                                    },
+                                    "true": [
+                                        {
+                                            "id": "dc1fdae9-4341-43a4-9b0c-ad2e1a18a39e",
+                                            "command": "EVENT_PLAYER_SET_SPRITE",
+                                            "args": {
+                                                "spriteSheetId": "4909e8b7-9ecd-4d12-a61e-100329e5fe40"
+                                            }
+                                        },
+                                        {
+                                            "id": "9162c605-5f1d-4073-a9f2-1e66188ece8a",
+                                            "command": "EVENT_END"
+                                        }
+                                    ],
+                                    "false": [
+                                        {
+                                            "id": "be8a1e1e-003d-4df8-8815-41e899cc45e5",
+                                            "command": "EVENT_PLAYER_SET_SPRITE",
+                                            "args": {
+                                                "spriteSheetId": "0ee0cb19-f812-452d-97cb-20dd8ece888e"
+                                            }
+                                        },
+                                        {
+                                            "id": "c7580a08-5791-4b18-bc1c-373264631879",
+                                            "command": "EVENT_END"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "99d06868-45b4-4524-8c3a-479714c769df",
+                                    "command": "EVENT_END"
+                                }
+                            ],
+                            "false": [
+                                {
+                                    "id": "dfeab307-3f44-46b2-ab4f-48b412789df1",
+                                    "command": "EVENT_END"
+                                }
+                            ]
+                        },
+                        {
                             "id": "935aa4b1-d2f2-4e67-9dbc-0c575153be8f",
                             "command": "EVENT_SWITCH_SCENE",
                             "args": {
@@ -10366,7 +10419,7 @@
                 0,
                 160,
                 33,
-                254,
+                255,
                 255,
                 161,
                 1,
@@ -15237,7 +15290,7 @@
                             "command": "EVENT_IF_FALSE",
                             "args": {
                                 "variable": "0",
-                                "__collapse": true,
+                                "__collapse": false,
                                 "__collapseElse": true
                             },
                             "true": [
@@ -15246,7 +15299,7 @@
                                     "command": "EVENT_IF_TRUE",
                                     "args": {
                                         "variable": "10",
-                                        "__collapseElse": true,
+                                        "__collapseElse": false,
                                         "__collapse": true,
                                         "__label": "Coming from New Game"
                                     },
@@ -16393,6 +16446,14 @@
                                                             }
                                                         },
                                                         {
+                                                            "id": "2cd883b0-ec72-4b72-8ef8-a9f0b3744fea",
+                                                            "command": "EVENT_TEXT",
+                                                            "args": {
+                                                                "text": "You lost $1 for\nquitting. You can\ndo better!",
+                                                                "__collapse": true
+                                                            }
+                                                        },
+                                                        {
                                                             "id": "72e0d86b-7c5e-4d49-821e-513e6de360cd",
                                                             "command": "EVENT_END"
                                                         }
@@ -16953,11 +17014,40 @@
                             },
                             "true": [
                                 {
-                                    "id": "c4629099-e995-4743-967b-b29bbdea1199",
-                                    "command": "EVENT_TEXT",
+                                    "id": "44fbde84-073f-4048-936b-cf619d59c537",
+                                    "command": "EVENT_IF_VALUE",
                                     "args": {
-                                        "text": "Deliver to House #\n$14$"
-                                    }
+                                        "variable": "14",
+                                        "operator": "==",
+                                        "comparator": 5,
+                                        "__collapseElse": false
+                                    },
+                                    "true": [
+                                        {
+                                            "id": "92ba236c-2446-4326-a9c2-a33ebe167f44",
+                                            "command": "EVENT_TEXT",
+                                            "args": {
+                                                "text": "No current\ndeliveries\nscheduled"
+                                            }
+                                        },
+                                        {
+                                            "id": "2f856fe7-3191-43fa-b6d0-9dc66764190f",
+                                            "command": "EVENT_END"
+                                        }
+                                    ],
+                                    "false": [
+                                        {
+                                            "id": "c4629099-e995-4743-967b-b29bbdea1199",
+                                            "command": "EVENT_TEXT",
+                                            "args": {
+                                                "text": "Deliver to House #\n$14$"
+                                            }
+                                        },
+                                        {
+                                            "id": "a904e5b4-9804-481b-8802-cb131abb8e3e",
+                                            "command": "EVENT_END"
+                                        }
+                                    ]
                                 },
                                 {
                                     "id": "fdedecba-d03d-4d69-8cc9-a7a5982e2e35",
