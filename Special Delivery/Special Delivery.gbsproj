@@ -174,6 +174,16 @@
             "_v": 1560727395188
         },
         {
+            "id": "19e993dd-f6ea-4e45-bd6b-c3cfcb52539d",
+            "name": "COVER",
+            "width": 32,
+            "height": 32,
+            "imageWidth": 256,
+            "imageHeight": 256,
+            "filename": "COVER.png",
+            "_v": 1560737988053
+        },
+        {
             "id": "9c1fc5dd-d28b-484a-b6f3-d16129aa6745",
             "name": "a3",
             "width": 32,
@@ -3372,6 +3382,48 @@
             "actors": [],
             "triggers": [
                 {
+                    "id": "02e3836e-b8a0-45cf-82bd-6a86db8ab267",
+                    "x": 16,
+                    "y": 1,
+                    "width": 10,
+                    "height": 1,
+                    "trigger": "walk",
+                    "script": [
+                        {
+                            "id": "ebbeaf7a-93e3-4283-ba1e-61982b1e7cbd",
+                            "command": "EVENT_ACTOR_SHOW",
+                            "args": {
+                                "actorId": "player"
+                            }
+                        },
+                        {
+                            "id": "cb2fed11-512d-44cc-8907-6054531cd2fd",
+                            "command": "EVENT_END"
+                        }
+                    ]
+                },
+                {
+                    "id": "5a5444e4-d366-4209-bd2f-e8a0a161e4f2",
+                    "x": 15,
+                    "y": 1,
+                    "width": 1,
+                    "height": 3,
+                    "trigger": "walk",
+                    "script": [
+                        {
+                            "id": "c1fbc03f-937a-4031-b1e6-8c07f880a102",
+                            "command": "EVENT_ACTOR_SHOW",
+                            "args": {
+                                "actorId": "player"
+                            }
+                        },
+                        {
+                            "id": "adbf062d-1c49-4514-93d4-b60c45c2760d",
+                            "command": "EVENT_END"
+                        }
+                    ]
+                },
+                {
                     "id": "a0edb57a-bceb-4cf0-85b8-af56b64121ee",
                     "x": 26,
                     "y": 1,
@@ -3379,6 +3431,13 @@
                     "height": 3,
                     "trigger": "walk",
                     "script": [
+                        {
+                            "id": "177094e1-0b87-46c8-b80e-dc228b7d7827",
+                            "command": "EVENT_ACTOR_SHOW",
+                            "args": {
+                                "actorId": "player"
+                            }
+                        },
                         {
                             "id": "3f2702ed-5d7c-4f3d-9e8e-f1a99a24c460",
                             "command": "EVENT_IF_FALSE",
@@ -7926,7 +7985,7 @@
                             "id": "ae3f962e-9b95-45a6-a2ad-7f84654fde55",
                             "command": "EVENT_TEXT",
                             "args": {
-                                "text": "House numbers\nchange with each\ndelivery"
+                                "text": "Each house gets a\nnew number for\neach delivery"
                             }
                         },
                         {
@@ -16749,7 +16808,7 @@
                     "command": "EVENT_SET_INPUT_SCRIPT",
                     "args": {
                         "input": "a",
-                        "__collapse": true,
+                        "__collapse": false,
                         "__label": "Stats"
                     },
                     "true": [
@@ -16766,7 +16825,7 @@
                                     "id": "009df0b1-7c67-455b-bd6f-9be5a16c2042",
                                     "command": "EVENT_TEXT",
                                     "args": {
-                                        "text": "$05$ deliveries\ncompleted"
+                                        "text": "$05$ completed"
                                     }
                                 },
                                 {
@@ -16794,7 +16853,7 @@
                                     "id": "beb3864b-ffe4-45eb-ab55-b04c3f8caece",
                                     "command": "EVENT_TEXT",
                                     "args": {
-                                        "text": "$06$ deliveries\ncancelled"
+                                        "text": "$06$ cancelled"
                                     }
                                 },
                                 {
