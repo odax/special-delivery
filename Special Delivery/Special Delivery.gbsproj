@@ -8,7 +8,7 @@
         "zoom": 50,
         "startSceneId": "89702107-1594-424f-8c5b-a8afc7d3eb4c",
         "playerSpriteSheetId": "4909e8b7-9ecd-4d12-a61e-100329e5fe40",
-        "startMoveSpeed": "3",
+        "startMoveSpeed": "2",
         "startAnimSpeed": "4"
     },
     "_version": "1.1.0",
@@ -322,6 +322,16 @@
             "imageHeight": 144,
             "filename": "eating.png",
             "_v": 1560715832115
+        },
+        {
+            "id": "7b9a6d04-f96e-418e-9c76-e67192b22df5",
+            "name": "end",
+            "width": 20,
+            "height": 18,
+            "imageWidth": 160,
+            "imageHeight": 144,
+            "filename": "end.png",
+            "_v": 1560734512868
         },
         {
             "id": "b3c844f4-2897-4ac4-89e9-9037b2d894e1",
@@ -8200,7 +8210,7 @@
                     "id": "499d3042-a5b8-4016-a251-c8411d253827",
                     "command": "EVENT_WAIT",
                     "args": {
-                        "time": 0
+                        "time": 2
                     }
                 },
                 {
@@ -8211,7 +8221,7 @@
                         "x": 0,
                         "y": 0,
                         "direction": "",
-                        "fadeSpeed": "1"
+                        "fadeSpeed": "3"
                     }
                 },
                 {
@@ -17166,14 +17176,60 @@
         {
             "id": "72b0546b-83ed-4d57-b8bb-b713b5966422",
             "name": "End Room",
-            "backgroundId": "1e5f9d6a-bdbc-43e6-8c34-22f5bb5dea05",
+            "backgroundId": "7b9a6d04-f96e-418e-9c76-e67192b22df5",
             "x": 272,
             "y": 253,
             "width": 20,
             "height": 18,
             "actors": [],
             "triggers": [],
-            "collisions": [],
+            "collisions": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+            ],
             "script": [
                 {
                     "id": "efe17ee7-e65f-4f1e-9318-cb4810946c6d",
