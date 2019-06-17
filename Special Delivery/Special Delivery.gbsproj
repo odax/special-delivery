@@ -381,7 +381,7 @@
             "imageWidth": 160,
             "imageHeight": 144,
             "filename": "logo.png",
-            "_v": 1560733788529
+            "_v": 1560734018252
         },
         {
             "id": "5978b4ee-4161-4394-af3d-78b1b1f51514",
@@ -1138,7 +1138,7 @@
                                     "id": "92669464-6ff9-4045-9a72-41efad904f72",
                                     "command": "EVENT_TEXT",
                                     "args": {
-                                        "text": "You screen shakes\nwhen near a hiding\nspot"
+                                        "text": "Your screen shakes\nwhen near a hiding\nspot"
                                     }
                                 },
                                 {
@@ -8116,7 +8116,7 @@
         {
             "id": "89702107-1594-424f-8c5b-a8afc7d3eb4c",
             "name": "Logo",
-            "backgroundId": "1e5f9d6a-bdbc-43e6-8c34-22f5bb5dea05",
+            "backgroundId": "13d3895b-d5ae-4602-86ee-7dea0a54f3fd",
             "x": 485,
             "y": 657,
             "width": 20,
