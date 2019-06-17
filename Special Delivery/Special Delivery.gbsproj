@@ -16781,12 +16781,12 @@
                 32,
                 1,
                 0,
+                18,
+                0,
+                32,
+                1,
+                0,
                 30,
-                0,
-                0,
-                0,
-                0,
-                0,
                 0,
                 0,
                 0,
@@ -16897,12 +16897,40 @@
                             ]
                         },
                         {
-                            "id": "d6bbff36-f765-43d1-ae52-7c14a5ddf78c",
+                            "id": "bdb1de8f-e16f-4456-98f8-6207f8d41cd8",
                             "command": "EVENT_IF_ACTOR_AT_POSITION",
                             "args": {
                                 "actorId": "player",
                                 "x": 2,
                                 "y": 9
+                            },
+                            "true": [
+                                {
+                                    "id": "c4629099-e995-4743-967b-b29bbdea1199",
+                                    "command": "EVENT_TEXT",
+                                    "args": {
+                                        "text": "Deliver to House #\n$14$"
+                                    }
+                                },
+                                {
+                                    "id": "fdedecba-d03d-4d69-8cc9-a7a5982e2e35",
+                                    "command": "EVENT_END"
+                                }
+                            ],
+                            "false": [
+                                {
+                                    "id": "5fef354c-ffa2-451e-a521-8f8c401b0c29",
+                                    "command": "EVENT_END"
+                                }
+                            ]
+                        },
+                        {
+                            "id": "d6bbff36-f765-43d1-ae52-7c14a5ddf78c",
+                            "command": "EVENT_IF_ACTOR_AT_POSITION",
+                            "args": {
+                                "actorId": "player",
+                                "x": 2,
+                                "y": 11
                             },
                             "true": [
                                 {
