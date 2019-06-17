@@ -5,7 +5,7 @@
         "startX": 0,
         "startY": 0,
         "startDirection": "down",
-        "zoom": 50,
+        "zoom": 100,
         "startSceneId": "89702107-1594-424f-8c5b-a8afc7d3eb4c",
         "playerSpriteSheetId": "4909e8b7-9ecd-4d12-a61e-100329e5fe40",
         "startMoveSpeed": "3",
@@ -224,14 +224,14 @@
             "_v": 1560728430114
         },
         {
-            "id": "f59a9ea1-346b-445d-a1bc-b1d21a719d37",
+            "id": "445f094f-105f-44f2-ab38-97cc07c51c2e",
             "name": "c1",
             "width": 32,
             "height": 32,
             "imageWidth": 256,
             "imageHeight": 256,
             "filename": "c1.png",
-            "_v": 1560715832115
+            "_v": 1560730273888
         },
         {
             "id": "31e46067-f407-4943-8a7d-ca01e4d354c6",
@@ -241,7 +241,7 @@
             "imageWidth": 256,
             "imageHeight": 256,
             "filename": "c2.png",
-            "_v": 1560715832115
+            "_v": 1560730273544
         },
         {
             "id": "efc4c86d-e278-48d4-a535-0659c429c155",
@@ -251,7 +251,7 @@
             "imageWidth": 256,
             "imageHeight": 256,
             "filename": "c3.png",
-            "_v": 1560715832115
+            "_v": 1560730273592
         },
         {
             "id": "ea8ae84b-aa58-4d9e-9db4-0234459069ae",
@@ -261,7 +261,7 @@
             "imageWidth": 256,
             "imageHeight": 256,
             "filename": "c4.png",
-            "_v": 1560715832115
+            "_v": 1560730618294
         },
         {
             "id": "b1d002c4-1bdf-4bf1-8fc4-6f0f77f7bb5f",
@@ -271,7 +271,7 @@
             "imageWidth": 256,
             "imageHeight": 256,
             "filename": "d1.png",
-            "_v": 1560715832115
+            "_v": 1560730702409
         },
         {
             "id": "ca79df50-58b3-4b77-92f4-e72c3f0fbdd6",
@@ -281,7 +281,7 @@
             "imageWidth": 256,
             "imageHeight": 256,
             "filename": "d2.png",
-            "_v": 1560715832115
+            "_v": 1560731599753
         },
         {
             "id": "2d79b332-af62-460a-9a8a-29fe16220985",
@@ -1106,7 +1106,7 @@
                             "args": {
                                 "variable": "26",
                                 "__collapse": true,
-                                "__collapseElse": true
+                                "__collapseElse": false
                             },
                             "true": [
                                 {
@@ -1122,6 +1122,34 @@
                                     "args": {
                                         "variable": "26",
                                         "__collapse": false
+                                    }
+                                },
+                                {
+                                    "id": "92669464-6ff9-4045-9a72-41efad904f72",
+                                    "command": "EVENT_TEXT",
+                                    "args": {
+                                        "text": "You screen shakes\nwhen near a hiding\nspot"
+                                    }
+                                },
+                                {
+                                    "id": "899ee0b3-5aff-4374-b5d7-9e8b7410045b",
+                                    "command": "EVENT_TEXT",
+                                    "args": {
+                                        "text": "Each delivery\nactivates a unique\nhiding spot"
+                                    }
+                                },
+                                {
+                                    "id": "c76cceea-c2bf-4d37-88d1-f2f603386f0b",
+                                    "command": "EVENT_TEXT",
+                                    "args": {
+                                        "text": "Find these spots\nto steal food from\nyour delivery"
+                                    }
+                                },
+                                {
+                                    "id": "291a04f4-74dd-4071-b28d-840215809877",
+                                    "command": "EVENT_TEXT",
+                                    "args": {
+                                        "text": "You lose money if\nyou deliver\nwithout stealing"
                                     }
                                 },
                                 {
@@ -6809,7 +6837,7 @@
         {
             "id": "03df9368-eb71-4f31-b326-bf4bbd6c8190",
             "name": "C1",
-            "backgroundId": "f59a9ea1-346b-445d-a1bc-b1d21a719d37",
+            "backgroundId": "445f094f-105f-44f2-ab38-97cc07c51c2e",
             "x": 1084.75,
             "y": 1138.5,
             "width": 32,
@@ -7034,134 +7062,134 @@
                 }
             ],
             "collisions": [
-                255,
-                31,
-                248,
-                255,
-                1,
-                0,
-                0,
-                128,
-                1,
-                0,
-                0,
-                128,
-                1,
-                0,
-                0,
-                128,
-                1,
-                0,
-                0,
-                128,
-                1,
-                0,
-                0,
-                128,
-                1,
-                0,
-                0,
-                128,
-                1,
-                0,
-                0,
-                128,
-                1,
-                0,
-                0,
-                128,
-                1,
-                0,
-                0,
-                128,
-                1,
-                0,
-                0,
-                128,
-                1,
-                0,
-                0,
-                128,
-                1,
-                0,
-                0,
-                128,
-                1,
                 0,
                 0,
                 0,
-                1,
                 0,
                 0,
                 0,
-                1,
                 0,
                 0,
                 0,
-                1,
                 0,
                 0,
                 0,
-                1,
                 0,
                 0,
-                128,
-                1,
                 0,
                 0,
-                128,
-                1,
-                254,
-                3,
-                128,
-                1,
-                0,
-                2,
-                128,
-                1,
-                0,
-                2,
-                128,
-                1,
-                0,
-                2,
-                128,
-                1,
-                0,
-                2,
-                128,
-                1,
-                254,
-                3,
-                128,
-                1,
                 0,
                 0,
-                128,
-                1,
                 0,
                 0,
-                128,
-                1,
                 0,
                 0,
-                128,
-                1,
                 0,
                 0,
-                128,
-                1,
                 0,
                 0,
-                128,
-                1,
                 0,
                 0,
-                128,
-                193,
-                255,
-                255,
-                255
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
             ],
             "script": [
                 {
@@ -7779,7 +7807,7 @@
                     "args": {
                         "variable": "11",
                         "__label": "From New Game",
-                        "__collapse": true,
+                        "__collapse": false,
                         "__collapseElse": true
                     },
                     "true": [
@@ -7787,35 +7815,21 @@
                             "id": "ca84fff2-e2a9-41a3-aeba-153de565f4d6",
                             "command": "EVENT_TEXT",
                             "args": {
-                                "text": "Welcome to one of\nthe many hidden\nalleyways"
+                                "text": "Welcome to one of\nthe many hiding\nspots.."
                             }
                         },
                         {
                             "id": "3c539c6d-7364-4542-b814-30055c037491",
                             "command": "EVENT_TEXT",
                             "args": {
-                                "text": "Here you can eat\nfrom your delivery\npackage"
-                            }
-                        },
-                        {
-                            "id": "e1c7d188-42fd-410f-9cfe-e4f8c1a28940",
-                            "command": "EVENT_TEXT",
-                            "args": {
-                                "text": "If you do it and\ndon't get caught,\nyou get money"
-                            }
-                        },
-                        {
-                            "id": "fa6373a9-6294-4fa0-8694-338f5825c716",
-                            "command": "EVENT_TEXT",
-                            "args": {
-                                "text": "You don't get paid\nif you just\ndeliver the food"
+                                "text": "You can steal food\nfrom your delivery\npackage here"
                             }
                         },
                         {
                             "id": "c705ea5b-b0b7-40fb-9399-adc74f7c75af",
                             "command": "EVENT_TEXT",
                             "args": {
-                                "text": "If you get caught\nyou lose money"
+                                "text": "Remember: If you\nget caught you\nlose money"
                             }
                         },
                         {
@@ -7829,7 +7843,7 @@
                             "id": "49f3b66f-b31e-4f5b-9429-bee5bddf0490",
                             "command": "EVENT_TEXT",
                             "args": {
-                                "text": "These are the real\nrules of the game"
+                                "text": "Here are the real\nrules of the game"
                             }
                         },
                         {
@@ -7843,7 +7857,7 @@
                             "id": "a5eb127a-2991-47ac-90f0-5584a31c00ba",
                             "command": "EVENT_TEXT",
                             "args": {
-                                "text": "2) Find the\ncorrect hidden\nalleyway"
+                                "text": "2) Find the active\nhiding spot"
                             }
                         },
                         {
@@ -7875,10 +7889,18 @@
                             }
                         },
                         {
+                            "id": "23067e7b-56ce-4240-b1b1-dc7f0f3632b9",
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": "Press START to\nview your stats at\nany time"
+                            }
+                        },
+                        {
                             "id": "786db8c7-f7a2-4d2e-93a5-d0c84f3a4106",
                             "command": "EVENT_TEXT",
                             "args": {
-                                "text": "Good luck!"
+                                "text": "Good luck!",
+                                "__collapse": false
                             }
                         },
                         {
@@ -13722,14 +13744,14 @@
                                                                     "command": "EVENT_TEXT",
                                                                     "args": {
                                                                         "text": "You have no money\nleft. Game Over!",
-                                                                        "__collapse": true
+                                                                        "__collapse": false
                                                                     }
                                                                 },
                                                                 {
                                                                     "id": "bb61c4ce-d511-4b18-b0a4-6a6c4843ff28",
                                                                     "command": "EVENT_RESET_VARIABLES",
                                                                     "args": {
-                                                                        "__collapse": true
+                                                                        "__collapse": false
                                                                     }
                                                                 },
                                                                 {
@@ -13741,7 +13763,7 @@
                                                                         "y": 0,
                                                                         "direction": "down",
                                                                         "fadeSpeed": "1",
-                                                                        "__collapse": true
+                                                                        "__collapse": false
                                                                     }
                                                                 },
                                                                 {
@@ -14611,7 +14633,8 @@
                                 "operator": "<=",
                                 "comparator": 99,
                                 "__label": "Low Balance",
-                                "__collapse": false
+                                "__collapse": true,
+                                "__collapseElse": true
                             },
                             "true": [
                                 {
@@ -14633,13 +14656,70 @@
                             ],
                             "false": [
                                 {
+                                    "id": "5ea3ff93-2197-4ba9-9d52-db1cf0fc85c5",
+                                    "command": "EVENT_ACTOR_HIDE",
+                                    "args": {
+                                        "actorId": "player"
+                                    }
+                                },
+                                {
+                                    "id": "7137a890-957f-4758-b2ca-f428321cb630",
+                                    "command": "EVENT_TEXT",
+                                    "args": {
+                                        "text": "Wow I can't\nbelieve I am\nfinally here"
+                                    }
+                                },
+                                {
+                                    "id": "d07cfcfe-9f58-4d45-a9f8-969b32ca0443",
+                                    "command": "EVENT_TEXT",
+                                    "args": {
+                                        "text": "Is this the\nkitchen?"
+                                    }
+                                },
+                                {
+                                    "id": "2b4dee25-9a46-4b1b-bf35-3dbc8af27540",
+                                    "command": "EVENT_TEXT",
+                                    "args": {
+                                        "text": "Wait.. What in the\nworld is that??"
+                                    }
+                                },
+                                {
+                                    "id": "3aed45fb-43af-41bd-8934-a1382621df68",
+                                    "command": "EVENT_TEXT",
+                                    "args": {
+                                        "text": "Is the food here\nmade from h.."
+                                    }
+                                },
+                                {
+                                    "id": "2adb02d8-37fc-457e-af47-f3ce76ed167e",
+                                    "command": "EVENT_TEXT",
+                                    "args": {
+                                        "text": "*footsteps\napproaching*"
+                                    }
+                                },
+                                {
+                                    "id": "a2481107-c577-4830-945f-3d11dad99ff4",
+                                    "command": "EVENT_TEXT",
+                                    "args": {
+                                        "text": "Chef Jake!? Did\nyou know the meat\nused here is h.."
+                                    }
+                                },
+                                {
+                                    "id": "c70aa255-8c59-4508-b717-5f103546f701",
+                                    "command": "EVENT_TEXT",
+                                    "args": {
+                                        "text": "*thud*\n*you fall on the\nfloor*",
+                                        "__collapse": false
+                                    }
+                                },
+                                {
                                     "id": "bbc7e8a1-2734-4f32-995a-d6b3bec5eb5f",
                                     "command": "EVENT_SWITCH_SCENE",
                                     "args": {
                                         "sceneId": "72b0546b-83ed-4d57-b8bb-b713b5966422",
-                                        "x": 0,
-                                        "y": 0,
-                                        "direction": "",
+                                        "x": 9,
+                                        "y": 9,
+                                        "direction": "up",
                                         "fadeSpeed": "1",
                                         "__label": "End Game"
                                     }
@@ -16957,7 +17037,7 @@
         },
         {
             "id": "72b0546b-83ed-4d57-b8bb-b713b5966422",
-            "name": "Kill Room",
+            "name": "End Room",
             "backgroundId": "1e5f9d6a-bdbc-43e6-8c34-22f5bb5dea05",
             "x": 272,
             "y": 253,
@@ -16965,7 +17045,81 @@
             "height": 18,
             "actors": [],
             "triggers": [],
-            "collisions": []
+            "collisions": [],
+            "script": [
+                {
+                    "id": "efe17ee7-e65f-4f1e-9318-cb4810946c6d",
+                    "command": "EVENT_ACTOR_HIDE",
+                    "args": {
+                        "actorId": "player"
+                    }
+                },
+                {
+                    "id": "d1b313b7-dbde-423f-a40b-3d5016e4eda3",
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": "You flew too close\nto the Sun"
+                    }
+                },
+                {
+                    "id": "87841066-57ba-4b2b-bc63-4040d0938cb0",
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": "Saw things you\nweren't supposed\nto"
+                    }
+                },
+                {
+                    "id": "ce5f98fa-7ff7-4a7b-8c86-4d35241cd98f",
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": "My Special..."
+                    }
+                },
+                {
+                    "id": "b4939cda-d94f-4ac9-aae0-afa1f8312a3c",
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": "My Special\nDelivery!"
+                    }
+                },
+                {
+                    "id": "f9c809f8-cec8-4e75-8dad-a92e1c9dbc25",
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": "Congratulations!\nYou won the\ngame..."
+                    }
+                },
+                {
+                    "id": "902d67aa-2e4f-4f7f-82cc-6d183303cf5f",
+                    "command": "EVENT_TEXT",
+                    "args": {
+                        "text": "Well... Sort of..."
+                    }
+                },
+                {
+                    "id": "16f9d8a1-b26e-4426-9c59-f2a50cfd2a23",
+                    "command": "EVENT_RESET_VARIABLES",
+                    "args": {
+                        "__collapse": false
+                    }
+                },
+                {
+                    "id": "367a65c4-6149-4feb-8745-b30a86089483",
+                    "command": "EVENT_SWITCH_SCENE",
+                    "args": {
+                        "sceneId": "2094d3ce-c062-4769-ba90-076bae788c93",
+                        "x": 0,
+                        "y": 0,
+                        "direction": "down",
+                        "fadeSpeed": "1",
+                        "__collapse": false
+                    }
+                },
+                {
+                    "id": "adbf062d-1c49-4514-93d4-b60c45c2760d",
+                    "command": "EVENT_END"
+                }
+            ]
         },
         {
             "id": "39143d0b-b6db-4b3d-b3e7-d11890401961",
