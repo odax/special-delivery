@@ -5,7 +5,7 @@
         "startX": 0,
         "startY": 0,
         "startDirection": "down",
-        "zoom": 50,
+        "zoom": 100,
         "startSceneId": "89702107-1594-424f-8c5b-a8afc7d3eb4c",
         "playerSpriteSheetId": "4909e8b7-9ecd-4d12-a61e-100329e5fe40",
         "startMoveSpeed": "2",
@@ -421,7 +421,7 @@
             "imageWidth": 160,
             "imageHeight": 144,
             "filename": "menu.png",
-            "_v": 1560715832115
+            "_v": 1560739054165
         },
         {
             "id": "1e5f9d6a-bdbc-43e6-8c34-22f5bb5dea05",
@@ -8722,7 +8722,54 @@
                     "movementType": "randomWalk",
                     "direction": "down",
                     "moveSpeed": "2",
-                    "animSpeed": "3"
+                    "animSpeed": "3",
+                    "script": [
+                        {
+                            "id": "22edd43b-c129-40ef-be66-6f541896af55",
+                            "command": "EVENT_SET_VALUE",
+                            "args": {
+                                "variable": "7",
+                                "value": 100
+                            }
+                        },
+                        {
+                            "id": "97cf9823-bfc5-4197-aea1-0ef5b4b23d20",
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": "You have enough\nmoney now.."
+                            }
+                        },
+                        {
+                            "id": "6550e944-69e0-422e-ad1d-48db261952e0",
+                            "command": "EVENT_TEXT",
+                            "args": {
+                                "text": "Let's see what's\nbehind that door"
+                            }
+                        },
+                        {
+                            "id": "2a0b626d-c685-4212-9ebb-7a5eea3cc2b3",
+                            "command": "EVENT_SET_TRUE",
+                            "args": {
+                                "variable": "0"
+                            }
+                        },
+                        {
+                            "id": "935aa4b1-d2f2-4e67-9dbc-0c575153be8f",
+                            "command": "EVENT_SWITCH_SCENE",
+                            "args": {
+                                "sceneId": "5193efec-b8d5-45ee-8028-9a9d0a299dfc",
+                                "x": 22,
+                                "y": 14,
+                                "direction": "up",
+                                "fadeSpeed": "1",
+                                "__collapse": true
+                            }
+                        },
+                        {
+                            "id": "39946a67-36aa-443e-b48d-ae4459e1b01f",
+                            "command": "EVENT_END"
+                        }
+                    ]
                 },
                 {
                     "id": "5d50b25c-9e76-48a2-ba67-4ffefde3dbf8",
@@ -10318,8 +10365,8 @@
                 0,
                 0,
                 160,
-                225,
-                255,
+                33,
+                254,
                 255,
                 161,
                 1,
